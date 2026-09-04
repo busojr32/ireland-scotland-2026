@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=5">
+<title>Ireland &amp; Scotland</title>
+<meta name="description" content="Leo & Kim — Ireland & Scotland, September 7–18 2026. Confirmed bookings, ideas and golf.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Ireland Trip">
+<meta name="theme-color" content="#22483a">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" href="favicon-32.png" sizes="32x32">
+<style>
+:root{
+  --ink:#1b201d; --ink2:#4d564f; --ink3:#828a84;
+  --bg:#f7f5f1; --card:#fff; --line:#e6e2da;
+  --ie:#2f6d4f; --ieb:#eaf3ed;
+  --sc:#2b5375; --scb:#e8eff5;
+  --am:#9c5d09; --amb:#fdf2e0;
+  --rd:#9b2a25; --rdb:#fbeaea;
+  --gy:#7d847e; --gyb:#eeedea;
+  --hdr:78px; --nav:62px;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --ink:#eceae5; --ink2:#b6bdb7; --ink3:#8b938c;
+    --bg:#141715; --card:#1e2220; --line:#31372f;
+    --ie:#7cc79c; --ieb:#1d2f25;
+    --sc:#8dbde6; --scb:#1a2734;
+    --am:#e0aa5c; --amb:#302518;
+    --rd:#f0908b; --rdb:#331c1b;
+    --gy:#9aa19b; --gyb:#252926;
+  }
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font:17px/1.55 -apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,sans-serif;
+  -webkit-font-smoothing:antialiased;
+  overscroll-behavior-y:contain;
+  padding-bottom:calc(var(--nav) + env(safe-area-inset-bottom));
+}
+/* ---------- header ---------- */
+header{
+  position:sticky;top:0;z-index:50;
+  background:linear-gradient(135deg,#22483a 0%,#2f6d4f 52%,#2b5375 100%);
+  color:#fff;padding:calc(env(safe-area-inset-top) + 13px) 16px 13px;
+  box-shadow:0 1px 0 rgba(0,0,0,.16);
+}
+header .row{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+header h1{margin:0;font-size:19px;font-weight:700;letter-spacing:-.015em}
+header .cd{font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;
+  background:rgba(255,255,255,.18);padding:4px 9px;border-radius:99px;white-space:nowrap}
+header p{margin:3px 0 0;font-size:13px;opacity:.86}
+/* ---------- panels ---------- */
+main{padding:14px 14px 26px;max-width:760px;margin:0 auto}
+.panel{display:none}
+.panel.on{display:block;animation:fade .18s ease}
+@keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+h2.sec{font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--ink3);
+  margin:26px 0 9px;font-weight:800}
+h2.sec:first-child{margin-top:2px}
+h3.leg{font-size:20px;margin:30px 0 4px;letter-spacing:-.02em;font-weight:700}
+h3.leg span{display:block;font-size:12px;font-weight:700;color:var(--ink3);
+  letter-spacing:.05em;text-transform:uppercase;margin-top:3px}
+/* ---------- cards ---------- */
+.c{background:var(--card);border:1px solid var(--line);border-radius:15px;
+  padding:14px 15px;margin-bottom:11px}
+.c.ie{border-left:4px solid var(--ie)}
+.c.sc{border-left:4px solid var(--sc)}
+.c.tr{border-left:4px solid var(--am)}
+.c.op{border-left:4px solid var(--gy)}
+.c h4{margin:0 0 9px;font-size:16.5px;letter-spacing:-.01em}
+.c > p{margin:0 0 9px;font-size:15.5px}
+.c > p:last-child{margin-bottom:0}
+.dh{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:10px}
+.dh .dt{font-size:18px;font-weight:700;letter-spacing:-.02em}
+.pill{font-size:10.5px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;
+  padding:3px 8px;border-radius:6px;color:var(--ie);background:var(--ieb);white-space:nowrap}
+.pill.sc{color:var(--sc);background:var(--scb)}
+.pill.tr{color:var(--am);background:var(--amb)}
+.pill.op{color:var(--gy);background:var(--gyb)}
+.pill.rd{color:var(--rd);background:var(--rdb)}
+/* ---------- schedule rows ---------- */
+ul.s{list-style:none;margin:0;padding:0}
+ul.s li{padding:9px 0;border-top:1px solid var(--line)}
+ul.s li:first-child{border-top:none;padding-top:0}
+ul.s li:last-child{padding-bottom:0}
+ul.s .t{display:inline-block;font-variant-numeric:tabular-nums;font-weight:800;
+  font-size:12px;color:var(--ink3);letter-spacing:.03em;margin-bottom:2px}
+ul.s .d{font-size:15.5px}
+.n{display:block;font-size:14px;color:var(--ink2);margin-top:4px}
+.em{font-style:italic;color:var(--ink2);font-size:15px;margin:0}
+/* ---------- key/value list (tables become these) ---------- */
+.kv{margin:0;padding:0;list-style:none}
+.kv li{display:flex;gap:12px;padding:8px 0;border-top:1px solid var(--line);font-size:15px}
+.kv li:first-child{border-top:none;padding-top:0}
+.kv .k{flex:0 0 96px;font-weight:700;font-size:13px;color:var(--ink3);
+  text-transform:uppercase;letter-spacing:.04em;padding-top:2px}
+.kv .v{flex:1;min-width:0}
+/* ---------- item blocks (courses, venues) ---------- */
+.it{border-top:1px solid var(--line);padding:12px 0}
+.it:first-of-type{border-top:none}
+.it:last-child{padding-bottom:0}
+.it .hd{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-bottom:3px}
+.it .nm{font-weight:700;font-size:16px;letter-spacing:-.01em}
+.it .pr{font-weight:800;font-size:15px;white-space:nowrap;color:var(--ie)}
+.it .pr.rd{color:var(--rd)}
+.it .mt{font-size:12.5px;color:var(--ink3);font-weight:600;letter-spacing:.03em;
+  text-transform:uppercase;margin-bottom:5px}
+.it .bd{font-size:14.5px;color:var(--ink2)}
+.it.top{background:var(--ieb);margin:0 -15px;padding:12px 15px;border-radius:11px;border-top:none}
+.it.top.sc{background:var(--scb)}
+/* ---------- notes ---------- */
+.b{border-radius:11px;padding:11px 13px;margin-top:11px;font-size:14.5px}
+.b.a{background:var(--gyb);border:1px solid var(--line)}
+.b.w{background:var(--amb);border:1px solid rgba(156,93,9,.28)}
+.b.s{background:var(--rdb);border:1px solid rgba(155,42,37,.28)}
+.b b.h{display:block;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px}
+.b.a b.h{color:var(--ink3)} .b.w b.h{color:var(--am)} .b.s b.h{color:var(--rd)}
+/* ---------- details ---------- */
+details{margin-top:11px;border-top:1px solid var(--line);padding-top:10px}
+details.solo{border:1px solid var(--line);border-radius:13px;padding:12px 14px;
+  background:var(--card);margin-bottom:11px}
+summary{cursor:pointer;font-weight:700;font-size:14.5px;color:var(--ie);
+  list-style:none;display:flex;align-items:center;gap:7px;min-height:26px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";width:7px;height:7px;border-right:2.2px solid currentColor;
+  border-bottom:2.2px solid currentColor;transform:rotate(45deg);margin-left:auto;
+  transition:transform .18s;opacity:.75}
+details[open] summary::after{transform:rotate(-135deg)}
+details .in{padding-top:10px}
+summary.sc{color:var(--sc)}
+/* ---------- misc ---------- */
+a{color:var(--ie);text-decoration:none;font-weight:600;border-bottom:1.5px solid rgba(47,109,79,.32)}
+.sc a,a.sc{color:var(--sc);border-bottom-color:rgba(43,83,117,.32)}
+a.tel{border:none;background:var(--ieb);color:var(--ie);padding:5px 11px;border-radius:8px;
+  font-size:14px;display:inline-block;margin:4px 6px 0 0;font-weight:700}
+ul.p{margin:0;padding-left:19px;font-size:15px}
+ul.p li{margin-bottom:6px}
+ul.p li:last-child{margin-bottom:0}
+.q{color:var(--am);font-weight:700}
+.tot{font-size:13px;color:var(--ink3);margin:14px 0 0;text-align:center}
+/* ---------- bottom nav ---------- */
+nav{
+  position:fixed;left:0;right:0;bottom:0;z-index:60;
+  display:grid;grid-template-columns:repeat(6,1fr);
+  background:color-mix(in srgb,var(--card) 88%,transparent);
+  backdrop-filter:saturate(180%) blur(20px);
+  -webkit-backdrop-filter:saturate(180%) blur(20px);
+  border-top:1px solid var(--line);
+  padding-bottom:env(safe-area-inset-bottom);
+}
+nav button{
+  appearance:none;border:0;background:none;font:inherit;cursor:pointer;
+  padding:7px 2px 6px;display:flex;flex-direction:column;align-items:center;gap:3px;
+  color:var(--ink3);min-height:var(--nav);justify-content:center;
+}
+nav button svg{width:23px;height:23px;stroke:currentColor;fill:none;
+  stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+nav button .lb{font-size:10.5px;font-weight:700;letter-spacing:.01em}
+nav button[aria-selected="true"]{color:var(--ie)}
+@media (prefers-color-scheme:dark){nav{background:color-mix(in srgb,var(--card) 92%,transparent)}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="row">
+    <h1>Ireland &amp; Scotland</h1>
+    <span class="cd" id="cd">—</span>
+  </div>
+  <p>Sept 7–18, 2026 &middot; Dublin &middot; Cork &middot; Edinburgh &middot; Dublin</p>
+</header>
+
+<main>
+
+<!-- ============================ TRIP ============================ -->
+<section class="panel on" id="p1">
+
+<h2 class="sec">Day by day — confirmed, with ideas tucked under each</h2>
+
+<div class="c tr">
+  <div class="dh"><span class="dt">Mon Sept 7</span><span class="pill tr">Travel</span></div>
+  <ul class="s">
+    <li><span class="t">4:45</span><span class="d">Depart San Diego. <span class="q">Confirm AM/PM.</span></span></li>
+  </ul>
+  <details><summary>Ideas for the flight</summary><div class="in">
+    <p style="margin:0;font-size:15px">Set your watch to Irish time at takeoff and sleep on their clock — Ireland is <b>+8 hours</b> from San Diego. Eat before boarding, skip the second meal service, treat the last two hours as morning.</p>
+  </div></details>
+</div>
+
+<div class="c ie">
+  <div class="dh"><span class="dt">Tue Sept 8</span><span class="pill">Dublin</span></div>
+  <ul class="s">
+    <li><span class="t">15:45</span><span class="d">Arrive Dublin Airport.</span></li>
+    <li><span class="t">Night</span><span class="d">The Fitzwilliam, St Stephen's Green.</span></li>
+  </ul>
+  <details><summary>Ideas for the evening</summary><div class="in">
+    <p style="font-size:15px">Realistically kerbside ~16:45 after non-EU control and bags, hotel ~17:30 — you're landing into rush hour, so budget 45 min for the taxi at €25–40. The old <b>Airlink airport bus no longer exists</b>; Dublin Express (~€10) and Aircoach (~€9) run, but take the cab.</p>
+    <ul class="s">
+      <li><span class="t">18:30</span><span class="d">St Stephen's Green, straight out the hotel door. Sunset ~20:05. Daylight is the best thing for a body clock that thinks it's 09:30 AM — you won't feel sleepy, so the risk is staying out too late. Bed by 22:30.</span></li>
+      <li><span class="t">19:15</span><span class="d"><b>Etto</b>, 18 Merrion Row, 6 min walk. Michelin-listed small plates — order three things or six, no long commitment. Tiny; book ahead.</span></li>
+      <li><span class="t">21:00</span><span class="d"><b>O'Donoghue's</b>, 15 Merrion Row — three doors from Etto. Trad sessions nightly from ~21:00. Where The Dubliners started.</span></li>
+    </ul>
+    <div class="b w"><b class="h">Your hotel restaurant is closed that night</b><b>Glovers Alley</b>, the Michelin-starred room in the Fitzwilliam, is <b>Wed–Sun only</b>. <b>The Lounge</b> in the hotel does all-day food — the no-effort fallback if you land wrecked.</div>
+    <div class="b a"><b class="h">Alternatives</b><b>Featherblade</b>, 51 Dawson St — one cut of steak, casual, great value, takes bookings. <b>Grogan's Castle Lounge</b>, South William St — famous toasties, no music, arguably the best pint in the centre. <b>Kehoe's</b> (South Anne St) and <b>The Long Hall</b> (South Great George's St) — two of the finest Victorian pub interiors in Europe, drinks rather than dinner. <b>Umi Falafel</b>, Camden St — €10, zero decisions.</div>
+  </div></details>
+</div>
+
+<div class="c tr">
+  <div class="dh"><span class="dt">Wed Sept 9</span><span class="pill tr">Dublin → Cork</span></div>
+  <ul class="s">
+    <li><span class="t">10:00</span><span class="d"><b>Train</b>, Dublin Heuston → Cork Kent — booked. Journey 2h25–2h45.</span></li>
+    <li><span class="t">~12:30</span><span class="d">Arrive Cork Kent. The Dean is a <b>two-minute walk</b> from the station.</span></li>
+    <li><span class="t">15:00</span><span class="d">Check-in, The Dean, Horgan's Quay.</span></li>
+  </ul>
+  <details><summary>Ideas — getting to the 10:00, and the afternoon</summary><div class="in">
+    <ul class="s">
+      <li><span class="t">08:00</span><span class="d">Breakfast at the Fitzwilliam (from 06:30), pack, check out.</span></li>
+      <li><span class="t">09:20</span><span class="d">Taxi to Heuston — 15 min, €12–15. Be there 20–25 min early; platforms are announced only shortly beforehand.</span></li>
+      <li><span class="t">13:00</span><span class="d"><b>Farmgate Café</b>, upstairs in the <b>English Market</b> — 12 min walk. Lunch only, Mon–Sat, so this is the natural day. Browse the fish and cheese counters below.</span></li>
+      <li><span class="t">15:00</span><span class="d"><b>Shandon Bells</b> at St Anne's — 132 steps, ring the bells yourself, ~€6. <span class="q">Their posted hours contradict each other</span> — call <b>+353 21 450 5906</b> that morning.</span></li>
+      <li><span class="t">19:00</span><span class="d"><b>Market Lane</b>, Oliver Plunkett St — modern Irish, takes walk-ins. Then <b>Sin É</b>, Coburg St, for a trad session. Order <b>Beamish</b> or <b>Murphy's</b>, not Guinness — both are Cork stouts and people notice.</span></li>
+    </ul>
+    <div class="b w"><b class="h">Heads up</b>UCC Freshers Week is Sept 9–10; Washington Street will be loud and student-heavy. The Dean is far enough east that it won't reach you.</div>
+  </div></details>
+</div>
+
+<div class="c op">
+  <div class="dh"><span class="dt">Thu Sept 10</span><span class="pill op">Open</span></div>
+  <p class="em">Nothing booked.</p>
+  <details><summary>Ideas — the big scenic day, or golf</summary><div class="in">
+    <ul class="s">
+      <li><span class="t">08:30</span><span class="d">Collect the rental car as early as the desk opens — most Cork city depots 08:00–09:00. Confirm when you book; it sets the day.</span></li>
+      <li><span class="t">09:15</span><span class="d"><b>Blarney Castle</b>, 20 min drive, €22. Get there before 10:30 and you kiss the stone in half an hour; after that the coaches land and the queue wraps the battlements for 30–45 min. The <b>gardens</b> are the real attraction and nearly everyone skips them — Poison Garden, Rock Close, arboretum. Give them 45 min.</span></li>
+      <li><span class="t">10:45</span><span class="d">Drive Blarney → Killarney, ~1h15 west on the N22. Blarney sits on the way, which is why it pairs with Kerry.</span></li>
+      <li><span class="t">12:15</span><span class="d"><b>Muckross House &amp; Gardens</b>, Killarney National Park — €9 house, park and parking free, 09:15–18:00 (last adm. 16:40). Lunch here.</span></li>
+      <li><span class="t">14:30</span><span class="d"><b>Torc Waterfall</b> — five minutes from the car park.</span></li>
+      <li><span class="t">15:30</span><span class="d"><b>Ladies View and Moll's Gap</b> on the N71 — the best 20 miles of the Ring of Kerry, without the full 179 km loop.</span></li>
+      <li><span class="t">19:30</span><span class="d">Back in Cork. <b>Goldie</b> (whole-catch seafood, tiny, book) or <b>Elbow Lane</b> (six tables, wood grill, walk-in only). Nightcap at <b>Mutton Lane Inn</b> or <b>The Shelbourne Bar</b> — 540+ Irish whiskeys.</span></li>
+    </ul>
+    <div class="b a"><b class="h">Swap — West Cork coast</b><b>A Taste of West Cork food festival runs Sept 6–15</b>, 250+ events across 41 towns. Cork → Clonakilty → Inchydoney → Glandore &amp; Union Hall → Skibbereen → Baltimore and back is ~8 hrs and gentler than Kerry. Do <b>not</b> attempt the full Mizen Head loop — 300 km and 6–7 hrs of driving before you stop anywhere.</div>
+    <div class="b a"><b class="h">Golf instead</b><b>Douglas GC, €50</b> before 10:30 — the best-value round of the trip, 10–15 min from The Dean. Tee at 08:00, clubhouse by 11:15, <b>Blarney by noon</b> — you keep the castle and only lose the Killarney drive. See the Golf tab.</div>
+    <div class="b a"><b class="h">No-car version</b>Cork City Tours runs a <b>Ring of Kerry coach, €50</b>, 09:00 from St Patrick's Quay, back by 19:00. Blarney would then need its own half-day (bus 215).</div>
+  </div></details>
+</div>
+
+<div class="c ie">
+  <div class="dh"><span class="dt">Fri Sept 11</span><span class="pill">Cork</span></div>
+  <ul class="s">
+    <li><span class="t">Day</span><span class="d">Day trip to <b>Kinsale</b>.</span></li>
+  </ul>
+  <details><summary>Ideas — how to shape the Kinsale day</summary><div class="in">
+    <p style="font-size:15px">You're up at 06:00 on Saturday, so keep this short and dinner early.</p>
+    <ul class="s">
+      <li><span class="t">09:30</span><span class="d">Drive to Kinsale, 35–45 min. Painted streets, the harbour, the Blue Haven corner.</span></li>
+      <li><span class="t">11:30</span><span class="d"><b>Charles Fort</b>, Summercove — €5, open to 18:00, last adm. 17:00. Huge star fort on the water, 3 km past town.</span></li>
+      <li><span class="t">13:00</span><span class="d"><b>The Bulman</b>, Summercove — waterfront pub literally beside Charles Fort. Or <b>Fishy Fishy</b> in town for Martin Shanahan's seafood.</span></li>
+      <li><span class="t">14:45</span><span class="d"><b>Old Head signal tower &amp; Lusitania Museum</b> — €6, to 17:00. The <i>Lusitania</i> sank 11 miles off this headland. The tip and lighthouse are private (Old Head Golf Links) — the signal tower is as far as the public gets.</span></li>
+      <li><span class="t">18:30</span><span class="d">Early dinner: <b>Saint Francis Provisions</b> (Bib Gourmand, 13 seats) or <b>Bastion</b> (Michelin star). Both need booking. <span class="q">Keep it early</span> — a three-hour tasting menu tonight is a mistake you'll feel at 07:00.</span></li>
+    </ul>
+    <div class="b w"><b class="h">Sort the car return before Friday ends</b>You need it dropped at Cork Airport around <b>07:00 Saturday</b>. Confirm the desk opens that early or has an out-of-hours key drop. <b>Fallback:</b> return it in the city Friday evening and taxi to the airport Saturday (€20–25, 15 min).</div>
+    <div class="b a"><b class="h">Car-free</b>Bus Éireann <b>226</b>: Kent Station → Cork Airport → Kinsale, 50–60 min, frequent. You'd skip Old Head. Golf option: <b>Kinsale GC €50</b>, 10 min from town — a 09:00 tee finishes ~12:15.</div>
+  </div></details>
+</div>
+
+<div class="c tr">
+  <div class="dh"><span class="dt">Sat Sept 12</span><span class="pill tr">Cork → Edinburgh</span></div>
+  <ul class="s">
+    <li><span class="t">06:45</span><span class="d">Leave The Dean.</span></li>
+    <li><span class="t">08:50</span><span class="d"><b>Depart Cork Airport</b> (Ryanair).</span></li>
+    <li><span class="t">10:10</span><span class="d"><b>Arrive Edinburgh.</b> Same time zone.</span></li>
+    <li><span class="t">Night</span><span class="d">Apex Waterloo Place.</span></li>
+  </ul>
+  <details><summary>Ideas for the afternoon</summary><div class="in">
+    <p style="font-size:15px">Taxi to the Apex ~£25–40, 20 min — easiest with bags. <b>Airlink 100</b> (£6, ~30 min) drops at Waverley Bridge, 5 min from the hotel; the <b>tram</b> (£7.90) runs to York Place, also ~5 min — but verify it's through Princes Street first.</p>
+    <ul class="s">
+      <li><span class="t">14:00</span><span class="d"><b>The Royal Yacht Britannia</b>, Leith — <b>last entry 16:00</b>, which is why it belongs today. Consistently Scotland's top-rated attraction and far better than it sounds: the Queen's actual floating home, left as she used it. Lothian bus <b>11, 22 or 35</b>, ~25–30 min.</span></li>
+      <li><span class="t">18:00</span><span class="d">Dinner in Leith — <b>The King's Wark</b> (15th century, five minutes from Britannia) or <b>Eleanore</b> on Leith Walk. Leith has the best food in the city.</span></li>
+      <li><span class="t">21:00</span><span class="d"><b>Sandy Bell's</b>, 25 Forrest Road — the trad session pub in Edinburgh. Nightly, free, tiny.</span></li>
+    </ul>
+    <div class="b a"><b class="h">Also worth today</b>The <b>National Museum of Scotland</b> (free, closes 17:00) no longer fits Sunday or Monday, so this afternoon is its only slot. The roof terrace is a viewpoint most visitors never find.</div>
+    <div class="b w"><b class="h">Ryanair</b>Check in online with boarding passes on your phone before leaving the hotel — they charge at the airport otherwise. Only the small under-seat bag is free unless you've paid.</div>
+  </div></details>
+</div>
+
+<div class="c sc">
+  <div class="dh"><span class="dt">Sun Sept 13</span><span class="pill sc">Edinburgh</span></div>
+  <ul class="s">
+    <li><span class="t">11:00</span><span class="d"><b>Edinburgh Castle</b> — timed entry, booked.</span></li>
+  </ul>
+  <details><summary class="sc">Ideas — the rest of Sunday</summary><div class="in">
+    <ul class="s">
+      <li><span class="t">09:15</span><span class="d">Slow breakfast, then walk up through <b>Princes Street Gardens and the Mound</b> — the prettiest approach to the Castle, about 20 min uphill. Arrive by 10:45.</span></li>
+      <li><span class="t">11:00</span><span class="d">Castle — allow two hours: Crown Jewels, Stone of Destiny, St Margaret's Chapel, the Great Hall. <span class="n">The <b>One O'Clock Gun does not fire on Sundays</b> — Mon–Sat only. Don't wait around at 13:00 for it.</span></span></li>
+      <li><span class="t">13:10</span><span class="d">Walk the Royal Mile down — Victoria Street and the closes off either side. Eight minutes downhill to Parliament Square.</span></li>
+      <li><span class="t">13:30</span><span class="d"><b>Afternoon tea</b> — see the Ideas tab for the three-way comparison. Colonnades serves to 16:30, so 13:30 lands you out around 15:30.</span></li>
+      <li><span class="t">15:45</span><span class="d"><b>Real Mary King's Close</b> — two minutes back up the Mile. £24.95 Signature tour, 1 hr, the buried 17th-century street beneath the Royal Mile. Best of the Old Town underground attractions, and it sells out. Skip the £40+ variants and skip Camera Obscura entirely.</span></li>
+      <li><span class="t">17:00</span><span class="d"><b>Edinburgh Riding of the Marches</b> — hundreds of horses process up the Royal Mile to St Giles'. A real local tradition, free, and it falls on your Sunday. Timings publish the week before.</span></li>
+      <li><span class="t">19:20</span><span class="d"><b>Calton Hill for sunset</b> (~19:45). Turn left out of the hotel and keep walking. Windy at the top.</span></li>
+      <li><span class="t">20:30</span><span class="d">Keep dinner light after the tea — <b>Ondine</b> (Old Town, oysters) or a plate at <b>The Bow Bar</b>.</span></li>
+    </ul>
+    <div class="b a"><b class="h">Golf option</b><b>Musselburgh Old Links</b> — nine holes on the oldest documented golf course on earth, £25.50 plus £57 for <b>hickory clubs</b>, 13 min by train from Waverley. Fits a Sunday afternoon if you'd rather skip the tea.</div>
+  </div></details>
+</div>
+
+<div class="c op">
+  <div class="dh"><span class="dt">Mon Sept 14</span><span class="pill op">Open</span></div>
+  <p class="em">Nothing booked.</p>
+  <details><summary class="sc">Ideas — day trip, or golf</summary><div class="in">
+    <ul class="s">
+      <li><span class="t">08:35</span><span class="d">Walk to <b>Edinburgh Bus Station</b>, St Andrew Square — 5–6 min. <b>Gates J &amp; K</b>, staff in pink hi-vis. Enter beside the Louis Vuitton shop on the Square, or on Elder Street under the green sign. <span class="q">Not their Waterloo Place office</span>, which older guides still list.</span></li>
+      <li><span class="t">09:00</span><span class="d"><b>Rabbie's: Loch Lomond, the Kelpies &amp; Stirling Castle</b> — ~£65 plus castle entry, back by 18:30. A 16-seat mini-coach with a driver-guide. Pay the castle-admission add-on or entry isn't guaranteed.<span class="n">Stirling Castle is arguably more interesting than Edinburgh's — better restored, Wallace and Bruce country, a fraction of the crowds. The Kelpies are two 30-metre steel horse heads. And Loch Lomond gives you real Highland scenery without eight hours in a seat.</span></span></li>
+      <li><span class="t">19:30</span><span class="d"><b>Whisky.</b> <b>Holyrood Distillery</b> (~£20–30, 10 min from the Royal Mile) is the only one where you stand next to working mash tuns and stills.<span class="n">To learn to <i>taste</i>: the <b>Scotch Whisky Experience Gold Tour</b> (£39.75) walks you through four contrasting regional single malts. The barrel ride is naff; the tasting is the point. <b>Johnnie Walker Princes Street</b> is about blends and cocktails — if you go, book "The Collection" (£45, six tastings), not "Journey of Flavour."</span></span></li>
+      <li><span class="t">21:00</span><span class="d"><b>The Bow Bar</b>, West Bow — no music, no TV, an extraordinary whisky wall.</span></li>
+    </ul>
+    <div class="b a"><b class="h">Two alternatives</b><b>DIY by train:</b> Waverley → Stirling is 43 min, 1–2 trains an hour, ~£10–17 return. Castle plus the Wallace Monument, home mid-afternoon, on your own clock. Best independent day out.<br><b>Gentler:</b> St Andrews + the Fife fishing villages, ~8.5 hrs, ~£60. Prettiest and least bus-heavy — top pick if you care about golf.</div>
+    <div class="b s"><b class="h">Don't do Loch Ness</b>12.5 hours door to door, roughly 8 of them driving, to look at a large grey lake that photographs better than it looks. Glencoe — the spectacular part — gets a photo stop. Good trip with five days in Scotland; you have two and a half.</div>
+    <div class="b a"><b class="h">Golf option</b><b>The Glen</b> (North Berwick East), ~£95–100 — clifftop links, 33-min direct train from Waverley plus a 0.8 km walk, no handicap certificate. But it costs you the Rabbie's tour, your only Highland scenery. See the Golf tab.</div>
+  </div></details>
+</div>
+
+<div class="c tr">
+  <div class="dh"><span class="dt">Tue Sept 15</span><span class="pill tr">Edinburgh → Dublin</span></div>
+  <ul class="s">
+    <li><span class="t">09:00</span><span class="d">To the airport — Airlink 100 from Waverley Bridge (£6, ~30 min) or taxi from the door (~£25–40).</span></li>
+    <li><span class="t">11:25</span><span class="d"><b>Depart Edinburgh.</b></span></li>
+    <li><span class="t">~12:45</span><span class="d">Arrive Dublin. Taxi to the Fitzwilliam, €25–40.</span></li>
+    <li><span class="t">Night</span><span class="d">The Fitzwilliam.</span></li>
+  </ul>
+  <details><summary>Ideas for the afternoon</summary><div class="in">
+    <ul class="s">
+      <li><span class="t">14:00</span><span class="d">Check in. Everything below is within six minutes of the front door.</span></li>
+      <li><span class="t">15:00</span><span class="d"><b>The Little Museum of Dublin</b>, 15 St Stephen's Green — across the park. €18, guided tours every 45 min, ~29 min long, <b>last entry 16:30</b>. Reopened Jan 2026 after a €4.3m rebuild; best-reviewed museum in the country.</span></li>
+      <li><span class="t">16:00</span><span class="d"><b>National Museum of Ireland — Archaeology</b>, Kildare St. <b>Free</b>, open Tue to 17:00. Bog bodies and Iron Age gold. The best free hour in Dublin.</span></li>
+      <li><span class="t">17:15</span><span class="d">The Georgian doors of Merrion Square on the way back.</span></li>
+      <li><span class="t">19:30</span><span class="d"><b>Uno Mas</b>, Aungier St — Michelin-listed Spanish small plates, buzzy. Glovers Alley downstairs is shut on a Tuesday.</span></li>
+    </ul>
+    <div class="b a"><b class="h">What you're not missing in Edinburgh</b>Holyroodhouse switched to Thursday–Monday opening from Sept 10, so it's closed Tuesdays regardless.</div>
+  </div></details>
+</div>
+
+<div class="c ie" style="border-left-width:5px">
+  <div class="dh"><span class="dt">Wed Sept 16</span><span class="pill">Fully booked</span></div>
+  <ul class="s">
+    <li><span class="t">09:30</span><span class="d"><b>St Patrick's Cathedral</b></span></li>
+    <li><span class="t">11:15</span><span class="d"><b>Guinness Storehouse</b> tour</span></li>
+    <li><span class="t">15:00</span><span class="d"><b>Book of Kells</b>, Trinity College</span></li>
+    <li><span class="t">19:30</span><span class="d"><b>Urban Brewing</b> — Vault C, CHQ Building, Custom House Quay</span></li>
+  </ul>
+  <details><summary>How the day joins up</summary><div class="in">
+    <p style="font-size:15px">Your four fixed points fall in a straight line west to east, and you can walk the whole thing.</p>
+    <ul class="s">
+      <li><span class="t">10:45</span><span class="d">St Patrick's → St James's Gate: <b>18 min west</b> along Thomas Street, straight through the Liberties. Or a €7 taxi.</span></li>
+      <li><span class="t">11:00</span><span class="d">Be at the Storehouse door by 11:00 for the 11:15. ~90 min, finishing with your pint in the Gravity Bar and a 360° view.</span></li>
+      <li><span class="t">13:00</span><span class="d">Lunch at the Storehouse, or back down Thomas Street into the Liberties.</span></li>
+      <li><span class="t">14:00</span><span class="d">Walk east toward Trinity — about 25 min, and the best free hour of the day: Thomas Street → <b>Christ Church Cathedral</b> (€12 for the crypt) → Dame Street → the top of Temple Bar → College Green.</span></li>
+      <li><span class="t">16:30</span><span class="d">After Trinity you're five minutes from the Fitzwilliam — drop anything you're carrying and change for dinner.</span></li>
+      <li><span class="t">18:45</span><span class="d">Walk to CHQ — 15 min along the Liffey past the Custom House. Or a €9 taxi.</span></li>
+      <li><span class="t">21:30</span><span class="d">If you have legs left: <b>The Cobblestone</b>, Smithfield, 12 min taxi — the best trad session in Dublin, seven nights a week, no amplification. The etiquette in the back snug is to listen rather than talk. <b>Devitt's</b> on Camden St is closer to the hotel and also the real thing.</span></li>
+    </ul>
+    <div class="b a"><b class="h">On the Long Room</b>It's mid-restoration. ~200,000 books are in storage and only the first four bays are still shelved, with the <b>Gaia</b> illuminated Earth sculpture hanging in the chamber. The Book itself, the Brian Boru harp, the 1916 Proclamation and the architecture are all still there — but it isn't the famous corridor of stacked books right now.</div>
+  </div></details>
+</div>
+
+<div class="c op">
+  <div class="dh"><span class="dt">Thu Sept 17</span><span class="pill op">Open</span></div>
+  <p class="em">Nothing booked.</p>
+  <details><summary>Ideas — one Luas line, end to end</summary><div class="in">
+    <p style="font-size:15px">Suir Road → James's → George's Dock. Prison, distillery, emigration, then the big dinner.</p>
+    <ul class="s">
+      <li><span class="t">10:00</span><span class="d"><b>Kilmainham Gaol</b> — €8, guided tour only, must be pre-booked. Luas Red Line to Suir Road. Allow 90 min; arrive 15 min early.<span class="n">Where the leaders of the 1916 Rising were executed. It explains modern Ireland better than anything else you'll see, and it's the cheapest great thing in the city.</span></span></li>
+      <li><span class="t">12:00</span><span class="d">Luas back one stop to James's. Lunch on James's or Thomas Street.</span></li>
+      <li><span class="t">13:30</span><span class="d"><b>A distillery</b> — see the Ideas tab. Roe &amp; Co is 2 min from the Guinness Storehouse; Thursday tours 12:00–18:00.</span></li>
+      <li><span class="t">15:15</span><span class="d">Luas Red Line all the way east to George's Dock, ~20 min.</span></li>
+      <li><span class="t">15:45</span><span class="d"><b>EPIC The Irish Emigration Museum</b>, CHQ Building — <b>last admission 17:00</b>. €22. Coming straight from Kilmainham the emigration story lands hard.</span></li>
+      <li><span class="t">20:00</span><span class="d"><b>The big dinner.</b> <b>Glovers Alley</b> — the Michelin-starred room in your own hotel, Wed–Sun, so tonight is finally the night. Or <b>Chapter One</b> (two stars, Parnell Square) if it has a table. Easier to book: <b>Variety Jones</b>, <b>Etto</b>.</span></li>
+    </ul>
+    <div class="b a"><b class="h">If you'd rather leave the city</b><b>Glendalough &amp; the Wicklow Mountains</b> guided day tour (€30–80) — a 6th-century monastic settlement in a glacial valley, usually with Powerscourt and the Sally Gap. It's a full day, so it costs Kilmainham, the distillery and EPIC together.<br><b>My read: don't.</b> You'll already have had Killarney, Ladies View, Moll's Gap and the Kinsale coast, plus Loch Lomond and Stirling. What you'd be short on is <i>Dublin</i>.<br><b>Lighter:</b> DART to <b>Howth</b> (25 min, €1.55 on a Leap card), the Bog of Frogs cliff loop, seafood at the harbour, home by 16:00.</div>
+    <div class="b a"><b class="h">Golf option</b><b>Howth GC €120</b> + €45 clubs — James Braid 1916 on Howth Head. DART to Sutton 22 min, then a €10 taxi. Thursday is unrestricted. But it's the most expensive trade: you'd salvage Kilmainham with an afternoon slot and lose the rest.</div>
+  </div></details>
+</div>
+
+<div class="c tr">
+  <div class="dh"><span class="dt">Fri Sept 18</span><span class="pill tr">Dublin → San Diego</span></div>
+  <ul class="s">
+    <li><span class="t">TBC</span><span class="d">Depart Dublin. <span class="q">Flight time not yet provided.</span></span></li>
+  </ul>
+  <details><summary>Ideas — and the preclearance warning</summary><div class="in">
+    <ul class="s">
+      <li><span class="t">Morning</span><span class="d">If your flight is midday or later: <b>EPIC</b> (opens 10:00) or the <b>Chester Beatty</b> (free, in the Dublin Castle gardens), whichever you skipped. Otherwise a last walk through St Stephen's Green.</span></li>
+      <li><span class="t">−3.5 hrs</span><span class="d"><b>Terminal 2, three to three and a half hours before departure.</b> You clear <b>US Customs and Immigration in Dublin</b> before boarding — check-in, then Irish security, then a second full CBP screening. T2 is officially busiest 05:00–12:00, when nearly every US flight leaves.<span class="n">The upside is real: you land in San Diego as a domestic arrival and walk straight to baggage. Build in a proper breakfast — the post-preclearance area is decent.</span></span></li>
+    </ul>
+    <div class="b w"><b class="h">One thing you'll just miss</b><b>Culture Night</b> is Friday Sept 18 — hundreds of Dublin buildings, galleries, studios and archives open free from early evening until late. The best free night in the Irish cultural calendar, and it's your departure day. If the flight home is flexible, an extra night is worth considering. If not: <b>Dublin Fringe Festival runs Sept 5–20</b> across both your Dublin stints, tickets from €15.</div>
+    <div class="b s"><b class="h">No golf today</b>Earliest realistic tee is 07:15; 18 holes puts you at T2 around 11:45–12:15, which only works for a flight at <b>15:15 or later</b>. Nine holes at St Margaret's near the airport is the only version that fits an earlier departure.</div>
+  </div></details>
+</div>
+
+</section>
+
+<!-- ============================ BOOKED ============================ -->
+<section class="panel" id="p2">
+
+<h2 class="sec">Flights &amp; transport</h2>
+<div class="c">
+  <div class="it"><div class="hd"><span class="nm">San Diego → Dublin</span><span class="pr">Mon 7</span></div>
+    <div class="bd">Departs <b>4:45</b> &middot; <span class="q">confirm AM / PM</span></div></div>
+  <div class="it"><div class="hd"><span class="nm">Arrive Dublin</span><span class="pr">Tue 8</span></div>
+    <div class="bd"><b>15:45</b></div></div>
+  <div class="it"><div class="hd"><span class="nm">Heuston → Cork Kent</span><span class="pr">Wed 9</span></div>
+    <div class="bd"><b>10:00</b> → arrives ~12:30 &middot; 2h25–2h45</div></div>
+  <div class="it"><div class="hd"><span class="nm">Cork → Edinburgh</span><span class="pr">Sat 12</span></div>
+    <div class="bd"><b>08:50 → 10:10</b> &middot; Ryanair &middot; same time zone</div></div>
+  <div class="it"><div class="hd"><span class="nm">Edinburgh → Dublin</span><span class="pr">Tue 15</span></div>
+    <div class="bd"><b>11:25</b> → arrives ~12:45</div></div>
+  <div class="it"><div class="hd"><span class="nm">Dublin → San Diego</span><span class="pr">Fri 18</span></div>
+    <div class="bd"><span class="q">Time not yet provided</span></div></div>
+</div>
+
+<h2 class="sec">Hotels</h2>
+<div class="c">
+  <div class="it"><div class="hd"><span class="nm">The Fitzwilliam</span><span class="pr">Sept 8–9</span></div>
+    <div class="mt">Dublin</div><div class="bd">St Stephen's Green. Grafton Street out the front door. <b>Glovers Alley</b> (Michelin) on site — Wed–Sun only. <b>The Lounge</b> does all-day food.</div>
+    <a class="tel" href="tel:+35314787000">Call hotel</a></div>
+  <div class="it"><div class="hd"><span class="nm">The Dean</span><span class="pr">Sept 9–12</span></div>
+    <div class="mt">Cork</div><div class="bd">Horgan's Quay — a <b>two-minute walk from Kent Station</b>. 12 min walk into the city centre.</div></div>
+  <div class="it"><div class="hd"><span class="nm">Apex Waterloo Place</span><span class="pr">Sept 12–15</span></div>
+    <div class="mt">Edinburgh</div><div class="bd">East end of Princes Street. Pool, Technogym studio, Elliot's Restaurant &amp; Bar on site. Ask for a room facing away from Waterloo Place — it's a bus and taxi through-route.</div>
+    <a class="tel" href="tel:+448000498000">Call hotel</a></div>
+  <div class="it"><div class="hd"><span class="nm">The Fitzwilliam</span><span class="pr">Sept 15–18</span></div>
+    <div class="mt">Dublin</div><div class="bd">Same as the first stay.</div></div>
+</div>
+
+<h2 class="sec">Booked activities</h2>
+<div class="c ie">
+  <div class="it"><div class="hd"><span class="nm">Edinburgh Castle</span><span class="pr">Sun 13 · 11:00</span></div>
+    <div class="bd">Timed entry. Arrive ~10:45; allow two hours.</div></div>
+  <div class="it"><div class="hd"><span class="nm">St Patrick's Cathedral</span><span class="pr">Wed 16 · 09:30</span></div>
+    <div class="bd">Dublin. Ireland's largest church; Jonathan Swift's grave in the nave.</div></div>
+  <div class="it"><div class="hd"><span class="nm">Guinness Storehouse</span><span class="pr">Wed 16 · 11:15</span></div>
+    <div class="bd">Be at the door by 11:00. ~90 min, finishing with a pint in the Gravity Bar.</div></div>
+  <div class="it"><div class="hd"><span class="nm">Book of Kells</span><span class="pr">Wed 16 · 15:00</span></div>
+    <div class="bd">Trinity College. Old Library ticket ~45 min; the "Experience" ~90.</div></div>
+  <div class="it"><div class="hd"><span class="nm">Urban Brewing</span><span class="pr">Wed 16 · 19:30</span></div>
+    <div class="bd">Vault C, CHQ Building, Custom House Quay.</div></div>
+</div>
+
+<h2 class="sec">Still needed from you</h2>
+<div class="c tr">
+  <ul class="p">
+    <li><b>Sept 7 departure</b> — 4:45 AM or PM?</li>
+    <li><b>Sept 18 flight home</b> — departure time.</li>
+  </ul>
+</div>
+
+<h2 class="sec">Not yet booked — priority order</h2>
+<div class="c">
+  <div class="it"><div class="hd"><span class="nm">Rental car, Cork</span><span class="pr rd">Now</span></div>
+    <div class="bd"><b>Automatic</b>, Sept 10 pickup, Cork Airport drop Sept 12. Automatics are scarce in Ireland and go early. Confirm the ORK desk opens before 07:00 or has an out-of-hours key drop. <b>Read the insurance warning on the Info tab before you book.</b></div></div>
+  <div class="it"><div class="hd"><span class="nm">Kilmainham Gaol</span><span class="pr rd">Now</span></div>
+    <div class="bd">Thu Sept 17, ~10:00. €8, guided tour only. The rolling 28-day window is already open for all your dates, so it's on sale now — and it genuinely sells out. <b>Official site only</b>; third-party tickets are explicitly invalid. If sold out, cancellations drop daily <b>09:15–09:30 Irish</b>.<br><a href="https://kilmainhamgaol.admit-one.eu">Book Kilmainham</a></div></div>
+  <div class="it"><div class="hd"><span class="nm">Rabbie's day tour</span><span class="pr">Soon</span></div>
+    <div class="bd">Mon Sept 14, Loch Lomond / Kelpies / Stirling, ~£65 + castle entry. Departs <b>Edinburgh Bus Station, St Andrew Square, Gates J&amp;K</b> — not their Waterloo Place office.<br><a href="https://www.rabbies.com/en-gb/tours/scotland/from-edinburgh/day-tours">Book Rabbie's</a></div></div>
+  <div class="it"><div class="hd"><span class="nm">Colonnades afternoon tea</span><span class="pr">Soon</span></div>
+    <div class="bd">Sun Sept 13, 13:30. Signet Library, Parliament Square. <b>£75</b> on your date. Wed–Sun 11:00–16:30 — confirm your Sunday isn't a private-event closure.<br><a href="https://www.thefork.co.uk/restaurant/colonnades-at-the-signet-library-r597439">Book on TheFork</a> &nbsp;<a class="tel" href="tel:+441312261064">0131 226 1064</a></div></div>
+  <div class="it"><div class="hd"><span class="nm">Real Mary King's Close</span><span class="pr">Soon</span></div>
+    <div class="bd">Sun Sept 13, 15:45. £24.95 Signature tour. Sells out.<br><a href="https://www.realmarykingsclose.com/tickets-prices/">Book</a></div></div>
+  <div class="it"><div class="hd"><span class="nm">Glovers Alley</span><span class="pr">Soon</span></div>
+    <div class="bd">Thu Sept 17, 20:00 — downstairs in the Fitzwilliam. <b>Wed–Sun only</b>, so Thursday is your one clean shot at it. <b>Chapter One</b> is the alternative if it still has a table.</div></div>
+  <div class="it"><div class="hd"><span class="nm">Etto</span><span class="pr">Soon</span></div>
+    <div class="bd">Tue Sept 8, 19:15 — your first night, when Glovers Alley is closed. 18 Merrion Row. Tiny.</div></div>
+  <div class="it"><div class="hd"><span class="nm">EPIC museum</span><span class="pr">Optional</span></div>
+    <div class="bd">Thu Sept 17, 15:45. CHQ Building. <b>Last admission 17:00.</b> €22.<br><a href="https://epicchq.com/visit/tickets-and-tours/">Book</a></div></div>
+  <div class="it"><div class="hd"><span class="nm">Golf &amp; distillery</span><span class="pr">Optional</span></div>
+    <div class="bd">Bookable at shorter notice — but reserve rental clubs at the same moment as any tee time. See the Golf tab.</div></div>
+</div>
+
+<h2 class="sec">Unallocated time</h2>
+<div class="c op">
+  <p style="margin:0"><b>Full days:</b> Thu Sept 10 (Cork) &middot; Mon Sept 14 (Edinburgh) &middot; Thu Sept 17 (Dublin).</p>
+  <p style="margin:8px 0 0"><b>Part days:</b> Tue 8 evening &middot; Wed 9 afternoon &middot; Sat 12 afternoon &middot; Sun 13 before 11:00 and after 13:00 &middot; Tue 15 afternoon.</p>
+</div>
+
+</section>
+
+<!-- ============================ IDEAS ============================ -->
+<section class="panel" id="p3">
+
+<div class="c op">
+  <p style="margin:0"><b>Nothing here is booked.</b> Day-specific ideas also sit under each day on the <b>Trip</b> tab. This tab holds the reference material that spans days.</p>
+</div>
+
+<h3 class="leg">Edinburgh afternoon tea<span>Sun Sept 13 · after the 11:00 Castle</span></h3>
+
+<div class="c sc">
+  <p style="font-size:14.5px;color:var(--ink2)">One note on the term: in Scotland <b>"high tea"</b> traditionally means an early-evening meal with a hot dish. The tiered stand is <b>afternoon tea</b>. All three below are afternoon tea.</p>
+
+  <div class="it top sc">
+    <div class="hd"><span class="nm">⭐ Colonnades</span><span class="pr">£75</span></div>
+    <div class="mt">Signet Library, Parliament Square · 8 min downhill from the Castle</div>
+    <div class="bd">Restored Lower Library — tall Corinthian columns, balustrades, real neo-classical grandeur. <b>The most beautiful of the three by a distance</b>, and the natural continuation of your Sunday. <b>Wed–Sun 11:00–16:30</b>; closed Mon &amp; Tue, and some Saturdays close for weddings. Price rose from £71 on 1 Sept. Dietary needs 24 hrs ahead — they can't do gluten- <i>and</i> dairy-free together. No music.<br>
+    <a href="https://www.thefork.co.uk/restaurant/colonnades-at-the-signet-library-r597439" class="sc">Book on TheFork</a> &nbsp;<a class="tel" href="tel:+441312261064">0131 226 1064</a></div>
+  </div>
+
+  <div class="it">
+    <div class="hd"><span class="nm">Palm Court</span><span class="pr">~£70 · £86 champagne</span></div>
+    <div class="mt">The Balmoral · 3 min from the Apex</div>
+    <div class="bd"><b>The safe choice</b> if you'd rather not build a day around a reservation. Glass dome, Venetian chandelier, potted palms — hotel-grand rather than historic, but unmistakably the classic Edinburgh tea. <b>Daily 12:00–17:00.</b> Listings report a <b>live harpist 12:00–17:00</b>; the hotel's own page doesn't mention it, so confirm. Prices aren't published either. Smart casual — no sportswear, shorts or beach shoes.<br>
+    <a class="tel" href="tel:+441315562414">+44 131 556 2414</a></div>
+  </div>
+
+  <div class="it">
+    <div class="hd"><span class="nm">The Court</span><span class="pr">£65 Hendrick's</span></div>
+    <div class="mt">The Caledonian · ~18 min, wrong side of town</div>
+    <div class="bd">The one genuinely distinctive offer: a <b>Hendrick's gin-and-patisserie tea</b>, gin-infused pastries plus a cocktail, and live piano and jazz. Cheapest of the three. <b>Daily 12:30–16:30.</b><br>
+    <b>But:</b> the hotel is mid-£35m refurbishment (Waldorf Astoria → Curio by Hilton) with recurring construction-noise complaints, and it sits closest to the Princes Street fire works. Combined with the walk in the opposite direction from your Sunday, it doesn't earn the slot.<br>
+    <a class="tel" href="tel:+441312228832">+44 131 222 8832</a></div>
+  </div>
+
+  <div class="b a"><b class="h">Also worth knowing</b><b>The Spence</b> at Gleneagles Townhouse — £60, St Andrew Square, 3 min away, but <b>14:30–16:30 only</b>. &nbsp;<b>Red Bus Bistro</b> — £47.50, tea on a vintage bus touring the Castle and Royal Mile, and it <b>departs Waterloo Place, your own street</b>, Tue–Sun at noon and 15:00. Gimmicky but fun, and it doubles as a city tour. &nbsp;<b>Mimi's Bakehouse</b> — £25, Market Street, daily from noon, no ceremony and excellent cakes.</div>
+</div>
+
+<h3 class="leg">Distilleries near the Guinness Storehouse<span>Thu Sept 17 · by walking distance</span></h3>
+
+<div class="c">
+  <div class="it top">
+    <div class="hd"><span class="nm">Roe &amp; Co</span><span class="pr">2 min</span></div>
+    <div class="mt">92 James's Street · across the road</div>
+    <div class="bd">In the old Guinness power station — you can see the Storehouse from the door. Raised gangway over a working still house. The experiences are blending- and cocktail-led (40 min workshop + 45 min reserved bar time) rather than a classic production tour. <b>Thursday 12:00–18:00.</b> <b>Best on logistics</b> — one Luas stop from Kilmainham, then you step onto James's Street.<br><a href="https://www.roeandcowhiskey.com/find-us">roeandcowhiskey.com</a></div>
+  </div>
+  <div class="it">
+    <div class="hd"><span class="nm">Pearse Lyons</span><span class="pr">7 min</span></div>
+    <div class="mt">121–122 James's Street · same street</div>
+    <div class="bd"><b>The most beautiful one.</b> A working pot-still distillery inside the deconsecrated St James' Church, with a modern glass spire on the medieval tower; the old graveyard holds Guinness family members. Tour &amp; tasting, gin school, blending experience. Prices aren't published — book direct for the best rate. <span class="q">Confirm hours by phone.</span><br><a href="https://pearselyonsdistillery.com/">pearselyonsdistillery.com</a> &nbsp;<a class="tel" href="tel:+35316916000">+353 1 691 6000</a></div>
+  </div>
+  <div class="it">
+    <div class="hd"><span class="nm">Dublin Liberties</span><span class="pr">12 min</span></div>
+    <div class="mt">33 Mill Street · southeast</div>
+    <div class="bd">Genuinely working distillery in a restored 400-year-old mill. Tour includes a welcome drink and a tasting. <b>Tue–Sat only — closed Sun &amp; Mon</b>, so Thursday works.<br><a href="https://thedld.com/plan-your-visit/">thedld.com</a></div>
+  </div>
+  <div class="it">
+    <div class="hd"><span class="nm">Teeling</span><span class="pr">15 min</span></div>
+    <div class="mt">Newmarket, the Liberties</div>
+    <div class="bd"><b>The best actual tour.</b> Dublin's first new distillery in 125 years and fully operational — you hear and smell it. Every 20 min from 11:00, 45 min. <b>€18</b> (whiskey + cocktail) / <b>€25</b> (three pours) / <b>€35</b> (four, incl. peated). Often sells out.<br><a href="https://teelingdistillery.com/plan-your-visit/">teelingdistillery.com</a></div>
+  </div>
+  <div class="it">
+    <div class="hd"><span class="nm">Jameson Bow St</span><span class="pr">22 min</span></div>
+    <div class="mt">Smithfield · over the river</div>
+    <div class="bd">The famous one, ~€33. Worth knowing before you go: <b>it isn't a working distillery</b> — Jameson is distilled in Midleton, Co. Cork. A very well-produced brand experience in the original warehouse.</div>
+  </div>
+</div>
+
+<h3 class="leg">Your Edinburgh hotel does a lot of work<span>Apex Waterloo Place</span></h3>
+<div class="c sc">
+  <ul class="p">
+    <li><b>Waverley Station — 3–5 min walk.</b> Direct trains to Stirling (43 min), North Berwick (33 min), Musselburgh (13 min).</li>
+    <li><b>Calton Hill — at the end of your street.</b> Waterloo Place runs straight into it. The sunset walk is ten minutes from the lobby.</li>
+    <li><b>Edinburgh Bus Station, St Andrew Square — 5–6 min.</b> Where Rabbie's departs.</li>
+    <li><b>Britannia buses</b> (Lothian 11/22/35) pick up on Princes Street and Leith Street, two minutes away.</li>
+    <li><b>Castle 16–18 min, Royal Mile 8 min.</b> The only uphill is on the way there.</li>
+    <li>Book <b>Elliot's</b> for the Saturday — you'll have been up since 06:00, and having dinner sorted downstairs with a pool available first is worth more than it sounds.</li>
+  </ul>
+  <div class="b w"><b class="h">Airport transfer — check the tram first</b>Taxi ~£25–40, 20 min, easiest with bags. <b>Airlink 100</b> is £6 and drops at Waverley Bridge, 5 min from the door. The <b>tram</b> (£7.90) runs to York Place — but a July 2026 Princes Street fire closed the west end and suspended the Leith line. Verify at <a href="https://edinburghtrams.com/" class="sc">edinburghtrams.com</a> before you fly; it affects both the transfer and getting to Britannia.</div>
+</div>
+
+<h3 class="leg">Not on this trip<span>ruled out, with reasons</span></h3>
+<div class="c">
+  <div class="b s"><b class="h">Ireland</b><b>Dingle / Slea Head</b> — 2h45 each way from Cork, an 11–12 hr day; deserves an overnight. <b>Full Ring of Kerry</b> — 10–12 hrs from Cork, a driving day not a sightseeing day. <b>Cliffs of Moher from Cork</b> — 10 hrs for 90 min at the cliffs; do it from Galway. <b>Crawford Art Gallery</b> (Cork) closed for redevelopment until 2028. <b>Dublin Castle interiors</b> closed all of 2026 — but the <b>Chester Beatty Library</b> in its gardens is free, world-class, and a better hour anyway.</div>
+  <div class="b s"><b class="h">Scotland</b><b>Loch Ness day trip</b> — 12.5 hrs door to door, ~8 of them driving. <b>Jacobite steam train from Edinburgh</b> — 13¼ hrs, from £198pp, mostly coach. Deserves a Fort William overnight. <b>Holyroodhouse</b> — Thursday–Monday from Sept 10, so closed on your Tuesday departure.</div>
+</div>
+
+</section>
+
+<!-- ============================ GOLF ============================ -->
+<section class="panel" id="p4">
+
+<div class="c">
+  <p><b>Budget:</b> $150 ≈ <b>€128 / £112.</b> Grouped as in budget, a stretch, or ruled out — the ruled-out ones carry real numbers so you can dismiss them properly.</p>
+  <p><b>Your 16 handicap clears every ceiling here.</b> Limits are 28–36 where they exist at all. Bring a printed GHIN record — several Irish clubs state "handicap required" and won't take your word for it.</p>
+  <p><b>You'll be renting clubs</b> — a bag on the Ryanair Cork→Edinburgh leg isn't worth it. Reserve the set at the same moment as the tee time and state right or left hand; small clubs stock only two or three bags.</p>
+  <div class="b a"><b class="h">Always ask two questions when you book</b>Club competitions and society days can close a weekday at short notice, and <b>early-to-mid September is when Irish clubs start hollow-coring greens</b> — the single most likely thing to spoil a round, and never posted online. One call settles both, plus the club-hire price where it isn't published.</div>
+</div>
+
+<h3 class="leg">🇮🇪 Cork<span>Thu Sept 10 open · Fri 11 Kinsale · car available</span></h3>
+
+<details class="solo" open><summary>In budget — 6 courses</summary><div class="in">
+  <div class="it top">
+    <div class="hd"><span class="nm">⭐ Douglas GC</span><span class="pr">€50</span></div>
+    <div class="mt">10–15 min · before 10:30 · €65 Mon–Thu · €75 Fri–Sun</div>
+    <div class="bd">Harry Vardon 1909, revised by <b>Alister MacKenzie</b> 1924. Hilltop parkland over the city, par 70, ~6,660 yds. Best Parkland in Munster. <b>Visitors every day except Tuesday.</b> Club hire on site, price unpublished. 50% no-show fee inside 48 hrs.<br><a class="tel" href="tel:+353214367208">021 436 7208</a></div>
+  </div>
+  <div class="it">
+    <div class="hd"><span class="nm">Youghal GC</span><span class="pr">€20</span></div>
+    <div class="mt">~45 min · €25 Sun / €30 Sat</div>
+    <div class="bd">Astonishing value. Clifftop seaside parkland over the Blackwater estuary, par 70, ~6,200 yds. The drive eats the day — the only knock.<br><a class="tel" href="tel:+3532492590">024 92590</a></div>
+  </div>
+  <div class="it">
+    <div class="hd"><span class="nm">Kinsale GC</span><span class="pr">€50</span></div>
+    <div class="mt">Farrangalway · 30–35 min · €60 weekend</div>
+    <div class="bd">27 holes, par 71, well conditioned and forgiving. <b>10 min from Kinsale town — pairs with Friday the 11th.</b> A 09:00 tee finishes ~12:15 as a two-ball. Clubs €30, buggy €30. Wednesday is the club singles day.<br><a class="tel" href="tel:+353214774722">021 477 4722</a></div>
+  </div>
+  <div class="it">
+    <div class="hd"><span class="nm">Muskerry GC</span><span class="pr">€55</span></div>
+    <div class="mt">20–25 min · €75 weekend</div>
+    <div class="bd">Another genuine <b>MacKenzie</b> — rolling parkland, River Shournagh crossings, par 71, 5,799 yds. The sleeper of the list. <span class="q">Members-only Thursday mornings</span>, Wednesday afternoons, and 12:30–13:30 daily. Club hire may not exist here.<br><a class="tel" href="tel:+353214385297">021 438 5297</a></div>
+  </div>
+  <div class="it">
+    <div class="hd"><span class="nm">Lee Valley G&amp;CC</span><span class="pr">€55</span></div>
+    <div class="mt">Ovens · 20–25 min · €65–75 weekend <span class="q">2026 unconfirmed</span></div>
+    <div class="bd">Christy O'Connor Jnr championship parkland — the biggest, most modern test near Cork. Par 72, 6,685 yds, water on seven holes.<br><a class="tel" href="tel:+353217331721">021 733 1721</a></div>
+  </div>
+  <div class="it">
+    <div class="hd"><span class="nm">Monkstown GC</span><span class="pr">€80</span></div>
+    <div class="mt">~20 min · €95 weekend · club page still shows 2024: €65/€85</div>
+    <div class="bd"><b>#97 in Ireland.</b> Mature parkland with harbour views on the front nine; hosted the 2025 Irish PGA. Short (5,451 yds off white) but tight. Par 70.<br><a class="tel" href="tel:+353214841376">021 484 1376</a></div>
+  </div>
+</div></details>
+
+<details class="solo"><summary>Over budget — with the real numbers</summary><div class="in">
+  <div class="it">
+    <div class="hd"><span class="nm">Cork GC, Little Island</span><span class="pr rd">€175</span></div>
+    <div class="bd"><b>The best course within 45 minutes of your hotel, full stop.</b> <b>#34 in Ireland</b> — MacKenzie routing with holes 6–10 through a disused limestone quarry on the Lee estuary, on heath-like turf that plays close to links. Par 72. Clubs €50. <b>Worth one phone call:</b> they publish a <b>€100 rate for affiliated golfers</b> — ask whether a USGA/GHIN handicap qualifies. That would put the region's best course inside budget.<br><a class="tel" href="tel:+353214353451">021 435 3451</a></div>
+  </div>
+  <div class="it">
+    <div class="hd"><span class="nm">Fota Island Resort</span><span class="pr rd">€180</span></div>
+    <div class="bd">#32 in Ireland, 27 holes, hosted the 2001 and 2002 Irish Opens. They advertise <b>early-bird and twilight rates but don't publish them</b> — a twilight could land under €130. Ask the pro shop. Clubs €50.<br><a class="tel" href="tel:+353214883700">021 488 3700</a></div>
+  </div>
+  <div class="it">
+    <div class="hd"><span class="nm">Castlemartyr Resort</span><span class="pr rd">€180</span></div>
+    <div class="bd">€120 for resort guests. #81 in Ireland, new Ron Kirby 18, ~30 min east. Hire items must be pre-booked.</div>
+  </div>
+  <div class="it">
+    <div class="hd"><span class="nm">Old Head of Kinsale</span><span class="pr rd">€500</span></div>
+    <div class="bd">Ireland's most dramatic clifftop links, and 3.3× your budget in September. Drops to €250 from <b>12 October</b> — a month after you leave.</div>
+  </div>
+  <div class="b s"><b class="h">Don't waste a call on these</b><b>Harbour Point (Little Island) is permanently closed</b> — it shut in May 2009, and aggregator sites still list it. <b>Fernhill (Carrigaline)</b> appears to have closed in 2017; a booking page still exists showing ~€20. Don't plan around either.</div>
+</div></details>
+
+<h3 class="leg">🏴 Edinburgh<span>Sat 12 / Sun 13 / Mon 14 · no car, rail matters</span></h3>
+
+<div class="c sc">
+  <p style="margin:0;font-size:14.5px"><b>One rail line does almost all the work:</b> ScotRail's North Berwick line, direct from Waverley — 3–5 min from your hotel. Musselburgh 13 min &middot; Longniddry 18–19 min &middot; Drem 25 min &middot; North Berwick 33–35 min, advance fares from <b>£8.90</b>. Dunbar is 25 min on the East Coast main line. <b>East Coast Buses X5 / 124 run direct from Princes Street</b> to Gullane and North Berwick — 56–59 min, £3.40 single.</p>
+</div>
+
+<details class="solo" open><summary class="sc">In budget — 7 courses</summary><div class="in">
+  <div class="it top sc">
+    <div class="hd"><span class="nm">⭐ The Glen</span><span class="pr">~£95–100</span></div>
+    <div class="mt">North Berwick East · train 33 min + 0.8 km walk · £120 Fri–Sun</div>
+    <div class="bd">James Braid &amp; Ben Sayers, 1906. Clifftop links, par 70, 6,321 yds, with Bass Rock and Tantallon Castle in view. Widely called the best value in North Berwick. <b>No handicap certificate required.</b> Twilight £70/£105. <span class="q">Confirm the 2026 rate</span> — their fee page is out of date.<br><a href="https://www.glengolfclub.co.uk" class="sc">glengolfclub.co.uk</a> &nbsp;<a class="tel" href="tel:+441620892726">01620 892726</a></div>
+  </div>
+  <div class="it">
+    <div class="hd"><span class="nm">🥃 Musselburgh Old Links</span><span class="pr">£25.50</span></div>
+    <div class="mt">9 holes · train 13 min + 1.5 mi · £28 weekend</div>
+    <div class="bd"><b>The oldest documented golf course on earth</b> — play recorded since 1672 — laid out inside Musselburgh Racecourse. Par 34, 2,874 yds. <b>Hickory clubs £57</b>, modern £35.70, trolley £6.90. No handicap, no dress code. <span class="q">Closed Sat 12 Sept</span> for an evening race meeting; Sun and Mon clear.<br><a class="tel" href="tel:+441316535122">0131 653 5122</a></div>
+  </div>
+  <div class="it">
+    <div class="hd"><span class="nm">Braid Hills</span><span class="pr">£18.50</span></div>
+    <div class="mt">Lothian bus 25–30 min · up to £26.50</div>
+    <div class="bd">Cheapest and closest — municipal hilltop heathland, par 71, 5,858 yds, with the best panorama of the city, the Pentlands and the Forth of anything here. Gorse and blind tee shots; real character.<br><a class="tel" href="tel:+441314476666">0131 447 6666</a></div>
+  </div>
+  <div class="it">
+    <div class="hd"><span class="nm">Gullane No.3</span><span class="pr">£70</span></div>
+    <div class="mt">Drem + taxi, or X5/124 bus · £90 weekend</div>
+    <div class="bd">Short — par 67–68, ~5,200 yds — but genuine links, and the <b>best views of the three Gullane courses</b>. No visitor time restrictions, weekends included.</div>
+  </div>
+  <div class="it">
+    <div class="hd"><span class="nm">Gullane No.2</span><span class="pr">£100</span></div>
+    <div class="mt">Drem 25 min + £15 taxi, or X5/124 bus 57 min £3.40 · £125–130 weekend</div>
+    <div class="bd"><b>A tier above The Glen as a golf course.</b> Willie Park Jr, 1898. Open Championship qualifying venue, par 71, ~6,390 yds — the same magnificent Gullane Hill ground as No.1 at a third of the price. Handicap required. <b>No visitor time restrictions</b>; fourballs not before 09:04. Clubs ~£35.<br><a class="tel" href="tel:+441620842255">01620 842255</a></div>
+  </div>
+  <div class="it">
+    <div class="hd"><span class="nm">Longniddry</span><span class="pr">£90</span></div>
+    <div class="mt">Train 18–19 min + 17 min walk · after 10:00 · £105 weekend after 12:00</div>
+    <div class="bd"><b>Shortest train ride of any real course.</b> Harry Colt, 1921 — links/parkland hybrid, par 68, 6,260 yds; tight tree-lined inland holes plus genuine seaside stretches. <b>Max handicap 36.</b> Clubs, trolleys and buggies available. <span class="q">September rate unconfirmed — dynamic pricing.</span><br><a class="tel" href="tel:+441875852141">01875 852141</a></div>
+  </div>
+  <div class="it">
+    <div class="hd"><span class="nm">Duddingston</span><span class="pr">£55–95</span></div>
+    <div class="mt">~10 min by bus · varies by day and time</div>
+    <div class="bd">In-city parkland, par 72, ~6,500 yds, with the Braid Burn in play on 14 holes and Arthur's Seat overhead. Visitors all week; <b>weekends after 12:30.</b> Buggy and club hire available.<br><a class="tel" href="tel:+441316614301">0131 661 4301</a></div>
+  </div>
+</div></details>
+
+<details class="solo"><summary class="sc">A stretch — £115–150</summary><div class="in">
+  <div class="it">
+    <div class="hd"><span class="nm">Craigielaw</span><span class="pr">£125</span></div>
+    <div class="mt">Aberlady · £160 weekend · 2026 confirmed</div>
+    <div class="bd">Modern links, Donald Steel 2001 — excellent conditioning, big greens. Only £13 over target on a Monday and a genuinely good course. Longniddry train + <b>bus 124 every 20 min, 8 min</b>, or £13–16 taxi. All hire confirmed: <b>clubs £45</b>, buggy £45, electric trolley £20, pull £7, caddie £60.<br><a class="tel" href="tel:+441875870800">01875 870800</a></div>
+  </div>
+  <div class="it">
+    <div class="hd"><span class="nm">Kilspindie</span><span class="pr">~£120</span></div>
+    <div class="mt">Aberlady · <span class="q">2026 unconfirmed — 2023 was £90/£100</span></div>
+    <div class="bd">Charming short links on Aberlady Bay — par 69, 5,494 yds, Willie Park Jr / Ben Sayers. <b>Visitors after 11:04 daily, after 12:30 Saturday.</b> Clubs, trolleys, buggies and caddies available. Same travel as Craigielaw.<br><a class="tel" href="tel:+441875870358">01875 870358</a></div>
+  </div>
+  <div class="it">
+    <div class="hd"><span class="nm">Dunbar</span><span class="pr">£145</span></div>
+    <div class="mt">Mon–Wed 14:30+ slot only · standard weekday £175 · Fri £195 · weekend £225</div>
+    <div class="bd">Classic old links running along the shore. Direct East Coast main line train, 25 min, then ~10 min walk. <span class="q">A 14:30 tee on the 14th against a 19:36 sunset is tight-but-doable</span> with no margin for a slow group.<br><a class="tel" href="tel:+441368862317">01368 862317</a></div>
+  </div>
+</div></details>
+
+<details class="solo"><summary class="sc">Ruled out — with the real numbers</summary><div class="in">
+  <div class="it">
+    <div class="hd"><span class="nm">Muirfield</span><span class="pr rd">£395</span></div>
+    <div class="bd">£605 for 36 holes with lunch. <b>Visitors Tuesday and Thursday only</b> — not available on any of your three days regardless of price.</div>
+  </div>
+  <div class="it">
+    <div class="hd"><span class="nm">North Berwick West Links</span><span class="pr rd">£320</span></div>
+    <div class="bd"><b>No visitors Friday or Saturday at all.</b> Sunday window 13:30–15:40 only; Mon–Thu 11:00–12:10 and 13:30–15:30. The £220 shoulder rate applies to March and November, not September. Not a realistic target this trip.</div>
+  </div>
+  <div class="it">
+    <div class="hd"><span class="nm">Gullane No.1</span><span class="pr rd">£285–325</span></div>
+    <div class="bd">Two 2026 sources disagree on the price. Weekend visitor window is 14:56–15:28 only.</div>
+  </div>
+  <div class="it">
+    <div class="hd"><span class="nm">Luffness New</span><span class="pr rd">£210</span></div><div class="bd">—</div>
+  </div>
+  <div class="it">
+    <div class="hd"><span class="nm">Royal Burgess</span><span class="pr rd">£200</span></div>
+    <div class="bd">The £135 rate is for UK golf club members only — doesn't apply to you. Clubs £40 incl. push trolley.</div>
+  </div>
+  <div class="it">
+    <div class="hd"><span class="nm">Bruntsfield Links</span><span class="pr rd">£180</span></div>
+    <div class="bd">Golfing Society. £220 weekend. Handicap required. Clubs £40, buggy £45.</div>
+  </div>
+</div></details>
+
+<h3 class="leg">🇮🇪 Dublin<span>Tue 15 pm / Thu 17 open · no car, DART matters</span></h3>
+
+<div class="c">
+  <p style="margin:0;font-size:14.5px">From the Fitzwilliam it's a <b>10–12 min walk to Pearse Street station</b> for every northbound DART and commuter train. <b>Corballis, Donabate, Portmarnock and Malahide are all on the northern line.</b> TFI Leap 90-minute fare is €2.00, daily cap €6.00.</p>
+</div>
+
+<details class="solo" open><summary>In budget — 7 courses</summary><div class="in">
+  <div class="it top">
+    <div class="hd"><span class="nm">⭐ Howth GC</span><span class="pr">€120</span></div>
+    <div class="mt">Sutton · DART 22 min + €10 taxi · +€45 clubs · €135 Fri–Sun</div>
+    <div class="bd">James Braid, 1916 — heathland/links hybrid on Howth Head, gorse and heather, ~400 ft above Dublin Bay with the Mournes on a clear day. Par 71, ~6,280 yds, SSS 69 — fair for a 16 rather than a survival exercise. <b>Avoid Wednesdays and weekends; Thursday is unrestricted.</b> Buggy €45. No phones on course.<br><a class="tel" href="tel:+35318323055">+353 1 832 3055</a></div>
+  </div>
+  <div class="it">
+    <div class="hd"><span class="nm">Corballis Links</span><span class="pr">€27.50</span></div>
+    <div class="mt">Donabate ~30 min + €10 taxi · +€45 clubs · €35 weekend</div>
+    <div class="bd"><b>Ireland's only genuinely public links</b> — par 66, Ron Kirby coastal holes. Short but never dull, and ~<b>€75 all-in</b> with rented clubs. <b>Opens 06:30 daily.</b> Open singles comps Mon/Wed/Fri, so Thursday is clear. Buggy €35, trolley €15.<br><a class="tel" href="tel:+35318434000">01 843 4000</a></div>
+  </div>
+  <div class="it">
+    <div class="hd"><span class="nm">Roganstown</span><span class="pr">€60</span></div>
+    <div class="mt">Swords · taxi €45–55 from city, <b>€20 from the airport</b> · €70 weekend</div>
+    <div class="bd">Christy O'Connor Jr parkland, par 71, 7,000 yds off the back / 6,240 club, water on several holes. <b>7 km / under 10 min from Dublin Airport</b>, plays sunrise to sunset, complimentary airport shuttle for residents. Sister course <b>Swords Open €30/€35.</b> TaylorMade hire sets, price unconfirmed.<br><a class="tel" href="tel:+35318433118">+353 1 843 3118</a></div>
+  </div>
+  <div class="it">
+    <div class="hd"><span class="nm">St Margaret's G&amp;CC</span><span class="pr">€70</span></div>
+    <div class="mt">Mon–Thu international rate · €90 Fri &amp; weekend · <b>€15–20 taxi from the airport</b></div>
+    <div class="bd">Ruddy/Craddock parkland championship course, minutes from Dublin Airport. <b>9 holes €30–35</b> — the only realistic pre-flight option. Clubs €40 (TaylorMade SIM2), buggy €40, electric trolley €15, pull €5. The €45–65 tier is Golf Ireland members only.<br><a class="tel" href="tel:+35318640400">+353 1 864 0400</a></div>
+  </div>
+  <div class="it">
+    <div class="hd"><span class="nm">Powerscourt East</span><span class="pr">€70–75</span></div>
+    <div class="mt">Enniskerry, Wicklow · DART to Bray ~40 min + €20–25 taxi</div>
+    <div class="bd">Peter McEvoy parkland, par 72, 6,412 m back / 5,685 club, with Sugarloaf and Irish Sea views. Handicap required, soft spikes, walking course. Club hire unconfirmed — phone.<br><a class="tel" href="tel:+35312046033">+353 1 204 6033</a></div>
+  </div>
+  <div class="it">
+    <div class="hd"><span class="nm">Hermitage</span><span class="pr">€80</span></div>
+    <div class="mt">Lucan · bus 25/26 ~50 min, or taxi €35–40</div>
+    <div class="bd">Classic, well-regarded Liffey-valley parkland. <span class="q">Visitors Monday and Thursday only</span> — so the 17th qualifies and nothing else does. Club hire unconfirmed.</div>
+  </div>
+  <div class="it">
+    <div class="hd"><span class="nm">Laytown &amp; Bettystown</span><span class="pr">€95</span></div>
+    <div class="mt">Co. Meath · train 45–50 min + short taxi · €125 Sat from 11:30 / Sun from 14:00</div>
+    <div class="bd">Proper old-school links, and Des Smyth's home club. The €60 rate is Golf Ireland members only — a GHIN card won't qualify. Club hire unconfirmed.<br><a class="tel" href="tel:+353419827170">+353 41 982 7170</a></div>
+  </div>
+</div></details>
+
+<details class="solo"><summary>A stretch — €130–180</summary><div class="in">
+  <div class="it">
+    <div class="hd"><span class="nm">Royal Dublin</span><span class="pr">~€165</span></div>
+    <div class="mt">Tee before 08:20 · <span class="q">verify by phone</span></div>
+    <div class="bd"><b>Comfortably the best golf course in this section</b> — Harry Colt links, par 72, 6,309 m, on Bull Island. The <b>€2 bus 130</b> from Talbot Street drops you at the Bull Wall, 25–30 min. No visitors Wednesdays. Their fee table renders ambiguously — I read €165/€180 twice and €125/€140 once. <b>If it's the lower number, this is the round to play.</b> Deposit €40pp within 2 weeks, full payment a month out, 100% charge inside 14 days.<br><a class="tel" href="tel:+35318336346">+353 1 833 6346</a></div>
+  </div>
+  <div class="it">
+    <div class="hd"><span class="nm">St Anne's Links</span><span class="pr">€150</span></div>
+    <div class="mt">Bull Island · Mon–Fri · €200 weekend · €25 taxi, 20–25 min</div>
+    <div class="bd">True links turf, flat and walkable, right beside Royal Dublin. Par 71, 6,626 yds back / 6,202 club. <b>Visitors Mon / Thu / Fri all day.</b> Max handicap 28 men. Clubs €55, buggy €45. Or DART to Raheny plus a 2.2 km causeway walk.<br><a class="tel" href="tel:+35318336471">01 833 6471</a></div>
+  </div>
+  <div class="it">
+    <div class="hd"><span class="nm">Malahide</span><span class="pr">€150</span></div>
+    <div class="mt">Mon–Thu · €170 Fri · weekends members only · DART 25–30 min + €10–12 taxi</div>
+    <div class="bd">27 holes, par 72, Eddie Hackett parkland. Max handicap 36. A good course, but poor value against Howth at €120. Hire "subject to availability", price unconfirmed.<br><a class="tel" href="tel:+35318461611">+353 1 846 1611</a></div>
+  </div>
+</div></details>
+
+<details class="solo"><summary>Ruled out — with the real numbers</summary><div class="in">
+  <div class="it"><div class="hd"><span class="nm">The Island, Donabate</span><span class="pr rd">€375</span></div><div class="bd">Apr–Oct, Mon–Sun. 2.9× budget.</div></div>
+  <div class="it"><div class="hd"><span class="nm">Portmarnock GC</span><span class="pr rd">€325</span></div><div class="bd">The championship links. Midweek and weekend, lunch included. Max handicap 20 for societies. <b>Hosting The Open in 2027</b> — expect tighter access and higher fees, not lower.</div></div>
+  <div class="it"><div class="hd"><span class="nm">Portmarnock Hotel Links</span><span class="pr rd">€320</span></div><div class="bd">Jameson Golf Links, 1 Apr–31 Oct. Winter drops to €150; hotel residents €260. Caddy €80. Buggies by medical certificate only.</div></div>
+  <div class="it"><div class="hd"><span class="nm">The K Club</span><span class="pr rd">€260</span></div><div class="bd">Palmer North, Apr–Oct. €140 Jan–Mar. Buggy €60, clubs €60, caddy €75.</div></div>
+  <div class="it"><div class="hd"><span class="nm">Royal Dublin, standard</span><span class="pr rd">€220–250</span></div><div class="bd">€220 Mon–Thu, €250 Fri–Sun. Only the pre-08:20 slot brings it into reach.</div></div>
+  <div class="it"><div class="hd"><span class="nm">Druids Glen / Druids Heath</span><span class="pr rd">n/a</span></div><div class="bd">Rates not published — phone +353 1 287 0814. <b>Luttrellstown Castle</b> rates were unobtainable, site redirect loop.</div></div>
+  <div class="b s"><b class="h">Two access traps</b><b>Forrest Little (Cloghran)</b> is physically the closest course to Dublin Airport — but <b>it has no club hire at all</b>, which disqualifies it for you. <b>Greystones</b> takes visitors <b>Monday and Friday only</b>, so Thursday the 17th is out.</div>
+</div></details>
+
+<h3 class="leg">Daylight and round times</h3>
+<div class="c">
+  <ul class="kv">
+    <li><span class="k">Thu 10<br>Cork</span><span class="v">Sunrise 06:59 &middot; sunset <b>20:02</b><br>Latest sensible tee: ~15:15 fourball, ~16:15 two-ball</span></li>
+    <li><span class="k">Fri 11<br>Cork</span><span class="v">Sunrise 07:01 &middot; sunset 19:59</span></li>
+    <li><span class="k">Sat–Mon<br>Edinburgh</span><span class="v">Sunrise 06:37–06:41 &middot; sunset <b>19:41 → 19:36</b><br>Latest sensible tee: ~15:15</span></li>
+    <li><span class="k">Thu 17<br>Dublin</span><span class="v">Sunrise 07:03 &middot; sunset <b>19:39</b><br>Latest sensible tee: ~15:00</span></li>
+  </ul>
+  <p style="margin-top:11px;font-size:14.5px">Walking round: <b>3h00–3h30 as a two-ball</b> on the Cork parkland courses, <b>3h45–4h15</b> on the Scottish links, <b>~4h30</b> as a fourball anywhere. Add 20 min for check-in and issuing rental clubs.</p>
+  <div class="b w"><b class="h">Two days to avoid</b><b>Sat 12 Sept in Edinburgh</b> is the worst of the three — North Berwick West bans Saturday visitors outright, Musselburgh is closed for racing, and weekend rates add £25–35 everywhere. <b>Fri 18 Sept in Dublin</b> doesn't work at all for 18 holes: earliest realistic tee is 07:15, putting you at T2 around 11:45–12:15, and US preclearance wants 3–3.5 hours. Only viable for a flight at 15:15 or later.</div>
+</div>
+
+<h3 class="leg">My call</h3>
+<div class="c ie">
+  <p><b>Douglas on Thursday the 10th (€50), plus hickory clubs at Musselburgh on Sunday the 13th (£83 all-in).</b> Two rounds, roughly $155 total, and you keep Blarney, the Rabbie's tour and Kilmainham.</p>
+  <p style="font-size:14.5px">If you'd rather spend the whole budget on one round: <b>call Cork Golf Club about the €100 affiliated rate.</b> A MacKenzie quarry course on the Lee estuary, fifteen minutes from The Dean, is the best golf available to you on this trip — and if that rate applies to a GHIN handicap, it's also inside budget.</p>
+</div>
+
+</section>
+
+<!-- ============================ INFO ============================ -->
+<section class="panel" id="p5">
+
+<h2 class="sec">The rental car — read before booking</h2>
+<div class="c tr">
+  <ul class="kv">
+    <li><span class="k">Credit card</span><span class="v"><b>Most US credit-card rental insurance specifically excludes the Republic of Ireland.</b> It's the classic exclusion alongside Israel and Jamaica. Some cards (Chase Sapphire, certain World Elite Mastercards) do cover it — but you must <b>bring a printed letter of coverage from your issuer</b>, and Irish rental desks push back hard. Confirm in writing before you count on it.</span></li>
+    <li><span class="k">CDW</span><span class="v">Basic CDW is built into every Irish rental and can't be declined. Excess is €1,500–3,000, with a €2,500–3,500 hold on your credit card. Super CDW is €8–15/day booked online vs €20–35 at the desk.</span></li>
+    <li><span class="k">Never covered</span><span class="v">Tyres, glass, undercarriage — and <b>driving on unpaved roads voids cover entirely.</b> Your GPS will try to route you down gravel boreens in West Cork. Don't let it.</span></li>
+    <li><span class="k">Automatic</span><span class="v">Scarce and pricey in Ireland. Book early. Worth every euro — you'll be shifting with your left hand otherwise.</span></li>
+    <li><span class="k">Roads</span><span class="v">Regional roads have stone walls and hedges right at the tarmac edge. Posted 80 km/h limits are aspirational. <b>Budget 30–40% more time than Google Maps says.</b> Jack Lynch Tunnel in Cork is free.</span></li>
+    <li><span class="k">Alcohol</span><span class="v">50 mg/100 ml — stricter than most US states, and exceeding it voids all insurance.</span></li>
+  </ul>
+</div>
+
+<h2 class="sec">2026 closures and changes</h2>
+<div class="c">
+  <ul class="p">
+    <li><b>Dublin Castle is closed all of 2026.</b> Ireland holds the EU Council Presidency Jul–Dec and the Castle is the venue — State Apartments, Chapel Royal and Undercroft shut until January 2027. The yards and gardens stay open, and so does the <b>Chester Beatty Library</b> inside them: free, world-class, and a better hour anyway.</li>
+    <li><b>Cork's Crawford Art Gallery is closed</b> for redevelopment until 2028.</li>
+    <li><b>The Dublin Airlink bus no longer exists</b>, whatever your guidebook says.</li>
+    <li><b>Trinity's Long Room is mid-restoration.</b> ~200,000 books are in storage and only the first four bays are still shelved, with the <b>Gaia</b> illuminated Earth sculpture in the chamber. The Book, the Brian Boru harp, the 1916 Proclamation and the architecture are all still there — but it isn't the famous corridor of stacked books right now.</li>
+    <li><b>Edinburgh's trams to Leith were suspended</b> after a July 2026 Princes Street fire. Princes Street was due to reopen around Aug 26, but hoardings will likely remain. Affects both your airport transfer and getting to Britannia.</li>
+    <li><b>Holyroodhouse switched to Thursday–Monday</b> opening from Sept 10 — closed Tuesdays.</li>
+    <li><b>Rabbie's departure point moved</b> to Edinburgh Bus Station, St Andrew Square, Gates J&amp;K — not their Waterloo Place office.</li>
+    <li><b>The One O'Clock Gun</b> at Edinburgh Castle fires Monday–Saturday only, not Sundays.</li>
+  </ul>
+</div>
+
+<h2 class="sec">Verify close to departure</h2>
+<div class="c tr">
+  <ul class="p">
+    <li><b>Edinburgh trams</b> — <a href="https://edinburghtrams.com/" class="sc">edinburghtrams.com</a>, a few days before you fly.</li>
+    <li><b>Your 08:50 Ryanair</b> — confirmed, but Ryanair moves these. Check in online with boarding passes on your phone before leaving the hotel; they charge at the airport otherwise. Only the small under-seat bag is free unless you've paid.</li>
+    <li><b>Riding of the Marches timings</b> and Royal Mile closures for Sun Sept 13 — published the week before.</li>
+    <li><b>Shandon Bells hours</b> — call +353 21 450 5906. Their own pages contradict each other.</li>
+    <li><b>Golf competitions and greens maintenance</b> — one phone call per club settles both.</li>
+    <li><b>Colonnades</b> — confirm your Sunday isn't closed for a private wedding.</li>
+  </ul>
+</div>
+
+<h2 class="sec">Weather &amp; packing</h2>
+<div class="c">
+  <p>Mid-September is the sweet spot in both countries: shoulder season, crowds well down from August, ~13 hours of daylight. <b>Dublin / Cork</b> highs 16–18°C (61–65°F), lows 9–11°C. <b>Edinburgh</b> high 17°C, low 10°C, and windier. Roughly 17 rain days a month in all three — frequent light showers, not downpours.</p>
+  <ul class="p">
+    <li><b>A packable waterproof jacket with a hood.</b> The single most important item.</li>
+    <li><b>Skip the umbrella.</b> Atlantic and North Sea wind destroys them and locals don't bother.</li>
+    <li><b>Waterproof walking shoes with real grip</b> — non-negotiable. You'll do 8–12 km a day, and Edinburgh's wet cobbles and Old Town steps are a genuine hazard in smooth soles.</li>
+    <li><b>Layers:</b> t-shirt + fleece + shell. You'll use all three in one day.</li>
+    <li>One smart-casual outfit each for Glovers Alley / Bastion. No jacket required anywhere, but no athleisure.</li>
+    <li><b>Type G plug adapter</b> — Ireland and the UK use the same UK-style 3-pin, so one type covers the whole trip. Not the European 2-pin.</li>
+    <li><b>Leap card</b> for Dublin, or just tap contactless on DART/Luas/bus. Leap is <i>not</i> valid on Aircoach or Dublin Express.</li>
+    <li>Golf: bring your own shoes, glove and a printed GHIN record. Balls are cheaper bought at home.</li>
+  </ul>
+</div>
+
+<h2 class="sec">Time zones &amp; jet lag</h2>
+<div class="c">
+  <p>Ireland and the UK are both <b>+8 hours from San Diego</b> and share the same clock, so there's no change between Cork and Edinburgh.</p>
+  <p style="font-size:14.5px;color:var(--ink2)">Flying east is the harder direction. On the plane, set your watch to Irish time at takeoff and sleep on their clock. On arrival day, daylight is the drug — do not lie down, even for twenty minutes. At 18:30 Dublin time your body thinks it's 09:30 AM, so you won't feel remotely sleepy; the risk is staying out too late, not nodding off. Aim to be in bed by 22:30 local.</p>
+</div>
+
+<h2 class="sec">Useful numbers</h2>
+<div class="c">
+  <ul class="kv">
+    <li><span class="k">Emergency</span><span class="v"><b>112</b> or <b>999</b> — works in both Ireland and the UK</span></li>
+    <li><span class="k">Fitzwilliam</span><span class="v"><a class="tel" href="tel:+35314787000">+353 1 478 7000</a></span></li>
+    <li><span class="k">Apex</span><span class="v"><a class="tel" href="tel:+448000498000">0800 049 8000</a></span></li>
+    <li><span class="k">Shandon Bells</span><span class="v"><a class="tel" href="tel:+353214505906">+353 21 450 5906</a></span></li>
+    <li><span class="k">Colonnades</span><span class="v"><a class="tel" href="tel:+441312261064">0131 226 1064</a></span></li>
+  </ul>
+</div>
+
+<p class="tot">Built for Leo &middot; last updated 2 Sept 2026<br>Works offline once loaded. Pull down to refresh for updates.</p>
+
+</section>
+
+<!-- ============================ PUBS ============================ -->
+<section class="panel" id="p6">
+
+<div class="c op">
+  <p style="margin:0"><b>Each city leads with what's nearest your hotel</b>, then trad sessions, then the ones worth a walk. Session times are as published — but sessions are sessions, so treat any time as approximate and the day as reliable.</p>
+</div>
+
+<div class="b w"><b class="h">Three things the research turned up</b>
+<b>The Cobblestone is safe.</b> Dublin City Council refused the nine-storey hotel that would have demolished its back room. Full session schedule is running.<br><br>
+<b>The Edinburgh Ceilidh Club has moved off The Lot</b> — Tuesdays are now at Summerhall, bigger Friday ceilidhs at Assembly Roxy. Older guides still send you to the Grassmarket.<br><br>
+<b>An Spailpín Fánach in Cork is up for sale</b> after 34 years. Sessions are still running, but the session leader has said publicly they may have to move if the new owners aren't interested in the music. Re-check before you go.</div>
+
+<h3 class="leg">🇮🇪 Dublin<span>from The Fitzwilliam, St Stephen's Green</span></h3>
+
+<h2 class="sec">Within ten minutes of your door</h2>
+<div class="c ie">
+  <div class="it">
+    <div class="hd"><span class="nm">Kehoe's</span><span class="pr">3 min</span></div>
+    <div class="mt">9 South Anne St · no music</div>
+    <div class="bd">A perfect Victorian shop-pub with a tiny snug — and upstairs is the old publican's living quarters with the furniture still in place. Great pint. <b>Standing-room-only from 18:00</b> and it spills onto the street.</div>
+  </div>
+  <div class="it">
+    <div class="hd"><span class="nm">O'Donoghue's</span><span class="pr">5 min</span></div>
+    <div class="mt">15 Merrion Row · trad every night</div>
+    <div class="bd">The Dubliners' home pub, and your closest real session. <b>Mon–Thu 20:00, Fri 18:30, Sat 17:30, Sun all day.</b> Free. Musicians' corner in the old front bar plus a covered courtyard for overflow. Heavily touristed and priced accordingly — but the music is still the real thing. <b>Three doors from Etto</b>, which is why they pair on your first night.</div>
+  </div>
+  <div class="it">
+    <div class="hd"><span class="nm">Grogan's Castle Lounge</span><span class="pr">5 min</span></div>
+    <div class="mt">15 South William St · no music by design</div>
+    <div class="bd">The artists' and writers' pub, paintings for sale on the walls. The entire food menu is <b>one toasted cheese-and-ham sandwich</b>, and it's a Dublin institution. Outdoor tables are contested blood sport in good weather.</div>
+  </div>
+  <div class="it">
+    <div class="hd"><span class="nm">The Long Hall</span><span class="pr">7 min</span></div>
+    <div class="mt">51 South Great George's St · no music</div>
+    <div class="bd">Arguably <b>the most beautiful bar interior in Ireland</b> — 1881 chandeliers, carved mahogany, antique clocks, and the glass partition through to the front bar. No music, no food, and no room after 19:00.</div>
+  </div>
+  <div class="it">
+    <div class="hd"><span class="nm">Doheny &amp; Nesbitt</span><span class="pr">8 min</span></div>
+    <div class="mt">5 Baggot St Lower</div>
+    <div class="bd">The "Doheny &amp; Nesbitt School of Economics" — where 1980s Irish policy got argued out by politicians and journalists walking up from Leinster House. Mahogany snugs, marble-top bar.</div>
+  </div>
+  <div class="it">
+    <div class="hd"><span class="nm">Toner's</span><span class="pr">10 min</span></div>
+    <div class="mt">139 Baggot St Lower</div>
+    <div class="bd">Said to be the only Dublin pub W.B. Yeats ever drank in. Original shelving and drawers survive from its grocery days, plus a proper snug and a big back yard. Good Guinness.</div>
+  </div>
+</div>
+
+<h2 class="sec">Trad sessions worth the trip</h2>
+<div class="c ie">
+  <div class="it top">
+    <div class="hd"><span class="nm">⭐ The Cobblestone</span><span class="pr">Luas 10 min</span></div>
+    <div class="mt">77 North King St, Smithfield · sessions 7 nights</div>
+    <div class="bd"><b>The real thing</b> — a listed "drinking pub with music," run by the Mulligan family of Doolin. 28 min on foot, or Luas Red Line to Smithfield.<br><br>
+    <b>Mon 21:00</b> — Ispíní na hÉireann, the rowdiest of the week<br>
+    <b>Tue 19:00</b> · <b>Wed 16:30</b> beginner-friendly · <b>Thu 17:00</b> Donegal fiddle<br>
+    <b>Fri 16:30</b> then 19:00 &amp; 21:30 · <b>Sat 17:00</b> old-time American, then 19:30 · <b>Sun 14:30</b><br><br>
+    The front-bar session corner is <b>for players, not audience</b>, and the etiquette is genuinely enforced — don't talk over the tunes. Ticketed gigs run separately in the Backroom. Small, and rammed by 21:00 at weekends; go for an early slot if you want a seat.<br><a href="https://cobblestonepub.ie/">cobblestonepub.ie</a></div>
+  </div>
+  <div class="it">
+    <div class="hd"><span class="nm">Devitt's</span><span class="pr">11 min</span></div>
+    <div class="mt">78 Camden St Lower · sessions 7 nights, upstairs</div>
+    <div class="bd">Mon–Thu 18:30, Fri–Sat 19:30, <b>Sun 14:00 — the pick of the week</b>: relaxed, high standard, free, no booking. Upstairs room is small, and Camden Street is a busy nightlife strip on Friday and Saturday.</div>
+  </div>
+  <div class="it">
+    <div class="hd"><span class="nm">The Piper's Corner</span><span class="pr">18 min</span></div>
+    <div class="mt">105–106 Marlborough St · open sessions most nights</div>
+    <div class="bd">Founded in the uilleann-piping tradition and the most musician-ish of the newer rooms — serious players, low tourist count. <span class="q">Their website is offline; times are posted only on Facebook</span>, so check before setting out. Scruffier block at night, but fine.</div>
+  </div>
+  <div class="it">
+    <div class="hd"><span class="nm">Walsh's</span><span class="pr">taxi</span></div>
+    <div class="mt">6 Stoneybatter · music Mondays only</div>
+    <div class="bd">The best-preserved snug in the city, and a pint around <b>€5.50 — roughly half Temple Bar</b>. <b>One music night a week, Monday evenings</b> — don't trek out on a Wednesday expecting a session. It's 8 minutes from the Cobblestone, so pair them.</div>
+  </div>
+</div>
+
+<h2 class="sec">Institutions</h2>
+<div class="c ie">
+  <div class="it">
+    <div class="hd"><span class="nm">The Palace Bar</span><span class="pr">12 min</span></div>
+    <div class="mt">21 Fleet St · Temple Bar, but the one to actually go to</div>
+    <div class="bd">An 1823 pub with a skylit back room, the historic <i>Irish Times</i> journalists' haunt, and a serious Irish whiskey list with own-label bottlings upstairs in the Whiskey Palace. At <b>€6.95 it was measured as the cheapest pint in the Temple Bar area</b> — which tells you everything about the pubs around it.</div>
+  </div>
+  <div class="it">
+    <div class="hd"><span class="nm">Mulligan's</span><span class="pr">14 min</span></div>
+    <div class="mt">8 Poolbeg St · est. 1782</div>
+    <div class="bd">The old <i>Irish Press</i> pub, and long-held reputation for <b>the best-kept pint of Guinness in Dublin</b>. John F. Kennedy drank here as a journalist in 1945. Deliberately plain — no music, no frills.</div>
+  </div>
+  <div class="it">
+    <div class="hd"><span class="nm">The Gravediggers</span><span class="pr">taxi</span></div>
+    <div class="mt">1 Prospect Square, Glasnevin · John Kavanagh's</div>
+    <div class="bd">Same family since <b>1833</b>, backing directly onto the Glasnevin Cemetery wall. The old bar has <b>no TV, no music, no fruit machines and no phones</b> — and a hatch that once served gravediggers mid-shift. The lounge side does excellent food.<br><b>⚠️ Cash only in the old bar.</b> Still true as of this month.</div>
+  </div>
+</div>
+
+<div class="b s"><b class="h">Dublin tourist traps — measured 2026 prices</b>
+<b>Merchant's Arch €10.00</b> — first pub in Ireland to break €10.<br>
+<b>The Temple Bar Pub €9.95</b> — around 90% tourists; the identical Guinness is €5.50 twelve minutes away in Stoneybatter.<br>
+<b>Oliver St John Gogarty €8.90–11.45</b> — the €11.45 logged here is the most expensive pint in Dublin.<br>
+<b>The Quays €7.50–8.00</b> — amplified covers-band trad-by-numbers.<br>
+<b>The Brazen Head</b> — genuinely old (claims 1198) but coach-tour saturated; the nightly 21:00 "sessions" are a set list, not a session.<br><br>
+<b>Johnnie Fox's</b> and <b>The Merry Ploughboy</b> are ticketed dinner-and-dancing shows out in the mountains — enjoyable, but not pubs.<br><br>
+<b>Dublin average pint: €7.04</b> across 299 tracked pubs. Budget €6.50–7.50 in the good rooms above.</div>
+
+<h3 class="leg">🇮🇪 Cork<span>from The Dean, Horgan's Quay</span></h3>
+
+<div class="b w"><b class="h">Order Beamish or Murphy's, not Guinness</b>
+This matters in Cork in a way it doesn't in Dublin. <b>Both are brewed in Cork</b> — Murphy's on the Lady's Well site where James J. Murphy founded it in the 1850s, and both now under Heineken Ireland. Both brands are growing 28%.<br><br>
+<b>Murphy's</b> is the sweeter, softer, less-roasted of the three — chocolatey and easy. <b>Beamish</b> is drier and more roasted, closer to Guinness but fuller, and it's <b>typically the cheapest pint in any Cork pub</b> — about 50c under the rivals. Order Beamish and you'll drink well and cheaply.<br><br>
+<b>Cork average pint: €6.13</b> — about 90c cheaper than Dublin. One amusing data point: the most expensive pint recorded in Cork (€8.50) is <b>The Dean Bar, in your own hotel.</b> Walk six minutes to the Shelbourne instead.</div>
+
+<h2 class="sec">Within ten minutes of your door</h2>
+<div class="c ie">
+  <div class="it top">
+    <div class="hd"><span class="nm">⭐ The Shelbourne Bar</span><span class="pr">6 min</span></div>
+    <div class="mt">17 MacCurtain St · your nearest, and no music</div>
+    <div class="bd"><b>Over 540 Irish whiskeys</b> — billed as the largest collection of Irish whiskey anywhere, and Irish Whiskey Bar of the Year 2023. Tastings available. Mon–Thu to 23:30, Fri–Sat to 00:30, Sun 12:30–23:00.<br><a href="https://www.theshelbournecork.ie/home-2">theshelbournecork.ie</a></div>
+  </div>
+  <div class="it">
+    <div class="hd"><span class="nm">Sin É</span><span class="pr">8 min</span></div>
+    <div class="mt">8 Coburg St · trad 7 nights</div>
+    <div class="bd"><b>The</b> trad pub of Cork — open since 1889, continuous live music for over fifty years. <b>19:00 Mon–Sat, 17:00 Sun</b>, free; the Tuesday and Friday/Sunday 18:30 slots are the marquee Lee Sessions ones. Preserved barber-shop fixtures and a carved gable stone inside.<br>It's a <i>session</i> pub, not a show pub — as one description puts it, it doesn't tolerate egos particularly well. <b>Cold food welcome, hot food not permitted</b>, so eat first. Tiny; go early.</div>
+  </div>
+  <div class="it">
+    <div class="hd"><span class="nm">The Corner House</span><span class="pr">8 min</span></div>
+    <div class="mt">7 Coburg St · blues and trad</div>
+    <div class="bd">Next door to Sin É, so do both in one night. Open fire, walls of Cork cycling and social history photographs, weekly sessions including <b>Wednesday around 21:30</b>. The blues and roots side is unusual for Ireland and genuinely good. Serves Murphy's and Beamish.</div>
+  </div>
+  <div class="it">
+    <div class="hd"><span class="nm">The Welcome Inn</span><span class="pr">8 min</span></div>
+    <div class="mt">Parnell Place · trad Wednesdays 21:30</div>
+    <div class="bd">Tiny, proper old city-centre bar — and <b>by far the closest real session to The Dean</b>.</div>
+  </div>
+</div>
+
+<h2 class="sec">More trad, a bit further</h2>
+<div class="c ie">
+  <div class="it">
+    <div class="hd"><span class="nm">Ó Súilleabháin's</span><span class="pr">16 min</span></div>
+    <div class="mt">21 Washington St · free Lee Sessions 5 nights</div>
+    <div class="bd">The city's "newest old pub," and now the most reliable multi-night trad in Cork: <b>Wed 20:00, Thu 20:00, Fri 19:30, Sat 20:00, Sun 20:00</b>, all free. Beamish and Murphy's brewery memorabilia, Franciscan Well and Blarney Brewing on tap, conversation-first atmosphere. With An Spailpín's future uncertain, this is the dependable one.</div>
+  </div>
+  <div class="it">
+    <div class="hd"><span class="nm">An Spailpín Fánach</span><span class="pr">16 min</span></div>
+    <div class="mt">28–29 South Main St · est. 1779 · <span class="q">up for sale</span></div>
+    <div class="bd">Low ceilings, flagstones, exposed brick and open fires, opposite the old Beamish &amp; Crawford brewery site. <b>Thu–Sat 21:30</b> instrumental, led by Hammy Hammond for about fifteen years; <b>Sun 21:00</b> in summer.<br>From October the Sunday slot becomes the <b>Cork Singers' Club</b> — unaccompanied sean-nós singing, a rarer and more special thing than the instrumental session, and it starts up right around when you're there. ⚠️ <b>The pub is listed for sale</b> and the session may move.</div>
+  </div>
+  <div class="it">
+    <div class="hd"><span class="nm">Charlie's Bar</span><span class="pr">15 min</span></div>
+    <div class="mt">2 Union Quay · Lee Sessions trad Sundays 15:00</div>
+    <div class="bd">Long-standing live-music bar with its own gig archive. The Sunday afternoon slot is a good, unhurried one.</div>
+  </div>
+  <div class="it">
+    <div class="hd"><span class="nm">Tom Barry's</span><span class="pr">22 min</span></div>
+    <div class="mt">Barrack St · trad Sundays 19:00–21:00</div>
+    <div class="bd">Beer garden, and one of the best-loved pubs south of the river with a young local crowd.</div>
+  </div>
+  <div class="it">
+    <div class="hd"><span class="nm">The Franciscan Well</span><span class="pr">20 min</span></div>
+    <div class="mt">North Mall · trad Tuesdays 20:30</div>
+    <div class="bd">Its own brewery taproom alongside the session — the only place on this list where the beer is made on site.</div>
+  </div>
+  <div class="it">
+    <div class="hd"><span class="nm">The Old Oak</span><span class="pr">12 min</span></div>
+    <div class="mt">Oliver Plunkett St · trad Tuesdays before 21:00</div>
+    <div class="bd">Central, big, and busy — the session is early, so arrive before nine.</div>
+  </div>
+  <div class="it">
+    <div class="hd"><span class="nm">Callanan's</span><span class="pr">15 min</span></div>
+    <div class="mt">24 George's Quay · low-key trad</div>
+    <div class="bd">Small, old, riverside-south, with a local crowd. Pairs with The Oval and South Main Street.</div>
+  </div>
+</div>
+
+<h2 class="sec">Character, no music</h2>
+<div class="c ie">
+  <div class="it">
+    <div class="hd"><span class="nm">Mutton Lane Inn</span><span class="pr">12 min</span></div>
+    <div class="mt">Mutton Lane, off St Patrick's St · est. 1787</div>
+    <div class="bd">Candlelit, down a lane so narrow you will walk straight past it. <b>This is the pub Cork people take visitors to first.</b> Genuinely tiny and packed from early evening.</div>
+  </div>
+  <div class="it">
+    <div class="hd"><span class="nm">The Long Valley</span><span class="pr">12 min</span></div>
+    <div class="mt">Winthrop St</div>
+    <div class="bd">Famous <b>doorstep-thick sandwiches cut by hand at the bar</b>, and old railway-carriage timber in the back room. Bohemian and literary history.</div>
+  </div>
+  <div class="it">
+    <div class="hd"><span class="nm">The Oval</span><span class="pr">15 min</span></div>
+    <div class="mt">25 South Main St</div>
+    <div class="bd">Classic Cork interior, quiet, and a conversation pub — the antidote to a session night.</div>
+  </div>
+  <div class="it">
+    <div class="hd"><span class="nm">Crane Lane Theatre</span><span class="pr">12 min</span></div>
+    <div class="mt">Phoenix St · late, 7 nights</div>
+    <div class="bd">A 1920s building holding a pub, a ballroom, a cabaret room and a beer garden across multiple stages. <b>Indie, blues, jazz and rock'n'roll rather than trad</b>, plus DJs and the occasional céilí. A late venue, not a quiet pint. <span class="q">Cover charge some nights, not published</span> — check the events page.</div>
+  </div>
+</div>
+
+<h3 class="leg">🏴 Edinburgh<span>from Apex Waterloo Place</span></h3>
+
+<h2 class="sec">Three minutes away — and they share a corner</h2>
+<div class="c sc">
+  <div class="it top sc">
+    <div class="hd"><span class="nm">⭐ Café Royal Circle Bar</span><span class="pr">3 min</span></div>
+    <div class="mt">19 West Register St · your local</div>
+    <div class="bd">The island-bar room with the <b>Doulton tiled portrait panels of Victorian inventors</b> — the finest pub interior in Edinburgh. Real ales, Scottish whiskies, and oysters at the bar; they still sell over a thousand Scottish rock oysters a week.<br><br>
+    <b>A piece of timing luck: 2026 is the Café Royal's bicentenary.</b> Running all year — a '200 Years' seafood platter, a 200-year cider, a limited Stewart Brewing lager, and Georgian-to-Scottish-Heritage themed dinners. The separate Oyster Bar restaurant needs booking; the Circle Bar doesn't.</div>
+  </div>
+  <div class="it">
+    <div class="hd"><span class="nm">The Guildford Arms</span><span class="pr">3 min</span></div>
+    <div class="mt">1 West Register St · next door</div>
+    <div class="bd">Spectacular high Victorian ceiling, ornate cornices, huge windows, and a serious real-ale bar with an upstairs gallery restaurant looking down over the room. <b>Do these two back to back</b> — they're on the same corner.</div>
+  </div>
+</div>
+
+<h2 class="sec">Folk and trad sessions</h2>
+<div class="c sc">
+  <div class="it">
+    <div class="hd"><span class="nm">The Royal Oak</span><span class="pr">12 min</span></div>
+    <div class="mt">1 Infirmary St · music every night</div>
+    <div class="bd">Nightly in the downstairs back bar from <b>21:00–21:30</b>, and <b>Sundays from about 17:00</b>. The Sunday <b>Wee Folk Club</b> downstairs is mainly folk song and welcomes floor singers.<br><b>The room holds about thirty people</b> — the most intimate folk room in the city. Arrive early or you're upstairs listening through the floor. <span class="q">Current start time and admission unverified</span> — check their Facebook the week you travel.</div>
+  </div>
+  <div class="it">
+    <div class="hd"><span class="nm">Sandy Bell's</span><span class="pr">18 min</span></div>
+    <div class="mt">25 Forrest Road · sessions since 1942</div>
+    <div class="bd">The folk pub of Edinburgh. Music <b>every single night, plus most afternoons</b> — roughly afternoons from 14:00 and evenings from 21:00. Free, no cover. The "Edinburgh Swing" fiddle style is native to this room.<br><span class="q">The pub itself calls its schedule "a rough guide only"</span> — turn up after 21:00 any night and there will be music, but don't plan around a specific act. One small room, no stage, standing once it fills; be there by 20:30 for a seat.</div>
+  </div>
+  <div class="it">
+    <div class="hd"><span class="nm">Captain's Bar</span><span class="pr">15 min</span></div>
+    <div class="mt">4 South College St · gentle, unamplified</div>
+    <div class="bd">Traditional and contemporary song, fiddle-led, and <b>unamplified</b> — small enough that you're sitting a metre from the singer. Most nights from about 21:00 on a rotating schedule; the pub publishes no per-night listing, so <b>check the noticeboard inside</b>. Mon–Fri from 14:00, Sat from 13:00, both to 01:00.</div>
+  </div>
+  <div class="it">
+    <div class="hd"><span class="nm">Edinburgh Ceilidh Club</span><span class="pr">moved</span></div>
+    <div class="mt">Tue: Summerhall · Fri: Assembly Roxy</div>
+    <div class="bd">⚠️ <b>No longer at The Lot in the Grassmarket</b>, whatever older guides say. Tuesdays at <b>Summerhall</b>, 1 Summerhall Place (~25 min); the larger Friday ceilidhs at <b>Assembly Roxy</b>, 2 Roxburgh Place (~15 min). <b>Every dance is called and taught, and beginners are the norm</b> — genuinely good fun for a couple. Times and prices on their events page.</div>
+  </div>
+  <div class="it">
+    <div class="hd"><span class="nm">Ghillie Dhu</span><span class="pr">20 min</span></div>
+    <div class="mt">2 Rutland Place, West End · ceilidhs in a converted church</div>
+    <div class="bd">Ceilidhs still run in the church auditorium, and the programme now includes a Late Night Ceilidh and a Burly Ceilidh Club strand. <span class="q">Their site blocked verification</span> — treat "Friday ceilidhs" as likely but unconfirmed, and book ahead.</div>
+  </div>
+</div>
+
+<h2 class="sec">Whisky and interiors</h2>
+<div class="c sc">
+  <div class="it">
+    <div class="hd"><span class="nm">The Bow Bar</span><span class="pr">15 min</span></div>
+    <div class="mt">80 West Bow · noon–midnight daily</div>
+    <div class="bd"><b>400+ single malts</b>, three regular and five changing cask beers mostly from independent Scottish breweries, and <b>seven traditional Scottish air-pressure founts — more than any other pub anywhere</b>. Grade C listed; one room, brewery mirrors, enamel signs.<br><b>Correction to what I told you earlier: this is not a music venue.</b> CAMRA describes it as "quiet" and any session is a rare, informal weekend-afternoon thing. Go for the whisky.<br>Gourmet pies 12:00–17:00 only, then almost no food. Step at the entrance, no accessible toilet, and no table service.</div>
+  </div>
+  <div class="it">
+    <div class="hd"><span class="nm">Bennets Bar</span><span class="pr">25 min</span></div>
+    <div class="mt">8 Leven St, Tollcross · 1891, Grade B listed</div>
+    <div class="bd"><b>The one to make the walk for.</b> 120 single malts, and it has the <b>last surviving original gantry with four spirit casks in Edinburgh</b> — four restored Aitken founts, hand-painted allegorical figures in tiled-and-mirrored arcading, two working brass water taps, and a marble spittoon trough at the bar.<br>Also a <b>rare intact "jug bar"</b>: a snug with its own street entrance and serving hatch, from the days when women bought carry-out beer without entering the pub. CAMRA rates it the city's second-finest interior after the Café Royal. Next to the King's Theatre.</div>
+  </div>
+  <div class="it">
+    <div class="hd"><span class="nm">The Oxford Bar</span><span class="pr">18 min</span></div>
+    <div class="mt">8 Young St · no music, no food</div>
+    <div class="bd">Ian Rankin's own pub and John Rebus's fictional one — Rankin still drinks here. It is <b>deliberately, almost aggressively plain</b>: two small bare rooms, pies at most, and locals who won't be impressed that you've read the books. That's the point. The front room fits maybe a dozen standing.</div>
+  </div>
+</div>
+
+<h2 class="sec">Worth the journey</h2>
+<div class="c sc">
+  <div class="it">
+    <div class="hd"><span class="nm">The Sheep Heid Inn</span><span class="pr">40–45 min</span></div>
+    <div class="mt">43–45 The Causeway, Duddingston</div>
+    <div class="bd">Claims 1360 and the title of <b>Scotland's oldest surviving licensed premises</b>; Mary, Queen of Scots and Queen Victoria are both associated with it. The <b>19th-century two-lane skittle alley</b> is still playable — and you must book it.<br><b>The walk is the reason to go:</b> route it through Holyrood Park under Arthur's Seat and around Duddingston Loch rather than along roads. Book a table — it's a destination Sunday-lunch pub and turns walk-ins away.</div>
+  </div>
+  <div class="it">
+    <div class="hd"><span class="nm">The King's Wark</span><span class="pr">15 min by bus</span></div>
+    <div class="mt">36 The Shore, Leith · this one's for the food</div>
+    <div class="bd">15th-century origins, bare stone and beams on the Leith waterfront, and one of the better gastropub kitchens in the city — strong on seafood, with a well-known weekend brunch. <b>Five minutes from Britannia</b>, which is why it's your Saturday dinner. Book for dinner and for weekend brunch.</div>
+  </div>
+</div>
+
+<div class="b"><b class="h">Edinburgh pint prices</b>Roughly <b>£5.50–7.00</b> for cask or lager in the pubs above. <span class="q">This is the softest number in this tab</span> — no reliable 2026 city-wide average was retrievable, and there's real variation between tied and free houses (one Edinburgh bar cut its pint price 25% in February under the Scottish Pubs Code).</div>
+
+<h2 class="sec">On during your trip</h2>
+<div class="c">
+  <ul class="kv">
+    <li><span class="k">Sept 5–20<br>Dublin</span><span class="v"><b>Dublin Fringe Festival</b> — 16 days, and it explicitly programmes performance <b>in pubs</b> as well as theatres and streets. Tickets from €15. Spans both your Dublin stints.</span></li>
+    <li><span class="k">Fri Sept 18<br>Dublin &amp; Cork</span><span class="v"><b>Culture Night</b> — free, one night, hundreds of venues open late, and trad sessions and pub events are a big part of the programme. <b>The single best night to be in Dublin for this tab</b> — and it's your departure day. Also runs in Cork.</span></li>
+    <li><span class="k">Sept 26–27<br>Edinburgh</span><span class="v"><b>Doors Open Days</b> — free access to buildings normally closed, including McEwan Hall and Panmure House. You miss it by two weeks.</span></li>
+    <li><span class="k">~1 Oct<br>Cork</span><span class="v"><b>Cork Folk Festival</b> — 40+ venues and a printed <b>pub trail map</b> so you can walk between sessions in one evening, plus a free opening event on Grand Parade. <span class="q">Dates not reliably verified</span> — the official site is years stale. Historically the last weekend of September into the first of October, so it may just catch the end of your trip. Worth re-checking.</span></li>
+  </ul>
+  <div class="b"><b class="h">Timing in your favour</b>The Edinburgh Festival and Fringe are <b>August, not September</b> — you arrive to a city that has just emptied out, which is precisely when you can actually get into Sandy Bell's and the Royal Oak.</div>
+</div>
+
+</section>
+
+</main>
+
+<nav role="tablist">
+  <button role="tab" id="t1" aria-selected="true" onclick="go(1)">
+    <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 11h18"/></svg>
+    <span class="lb">Trip</span></button>
+  <button role="tab" id="t2" aria-selected="false" onclick="go(2)">
+    <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><rect x="4" y="4" width="16" height="16" rx="2"/></svg>
+    <span class="lb">Booked</span></button>
+  <button role="tab" id="t3" aria-selected="false" onclick="go(3)">
+    <svg viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0-3 11v3h6v-3a6 6 0 0 0-3-11zM10 21h4"/></svg>
+    <span class="lb">Ideas</span></button>
+  <button role="tab" id="t4" aria-selected="false" onclick="go(4)">
+    <svg viewBox="0 0 24 24"><path d="M12 20V5l7 3-7 3"/><circle cx="8" cy="20" r="2"/></svg>
+    <span class="lb">Golf</span></button>
+  <button role="tab" id="t5" aria-selected="false" onclick="go(5)">
+    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>
+    <span class="lb">Info</span></button>
+  <button role="tab" id="t6" aria-selected="false" onclick="go(6)">
+    <svg viewBox="0 0 24 24"><path d="M7 3h10l-1 7a4 4 0 0 1-8 0z"/><path d="M12 14v5M9 21h6"/></svg>
+    <span class="lb">Pubs</span></button>
+</nav>
+
+<script>
+var N = 6;
+function go(n){
+  for (var i=1;i<=N;i++){
+    document.getElementById('p'+i).classList.toggle('on', i===n);
+    document.getElementById('t'+i).setAttribute('aria-selected', i===n?'true':'false');
+  }
+  window.scrollTo(0,0);
+  try{ localStorage.setItem('tab', n); }catch(e){}
+  if (history.replaceState) history.replaceState(null,'','#'+n);
+}
+// restore last tab, or honour a #hash link
+(function(){
+  var n = parseInt((location.hash||'').replace('#',''),10);
+  if (!(n>=1 && n<=N)) { try{ n = parseInt(localStorage.getItem('tab'),10); }catch(e){} }
+  if (n>=1 && n<=N) go(n);
+})();
+// countdown / trip status
+(function(){
+  var el = document.getElementById('cd');
+  var start = new Date('2026-09-07T00:00:00-07:00');
+  var end   = new Date('2026-09-19T00:00:00+01:00');
+  var days = [null,'Mon 7','Tue 8','Wed 9','Thu 10','Fri 11','Sat 12','Sun 13','Mon 14','Tue 15','Wed 16','Thu 17','Fri 18'];
+  function tick(){
+    var now = new Date();
+    if (now < start){
+      var d = Math.ceil((start-now)/864e5);
+      el.textContent = d + (d===1?' day to go':' days to go');
+    } else if (now < end){
+      var i = Math.floor((now - start)/864e5) + 1;
+      el.textContent = 'Day ' + i + ' · ' + (days[i]||'');
+    } else {
+      el.textContent = 'Trip complete';
+    }
+  }
+  tick(); setInterval(tick, 60000);
+})();
+// offline support
+if ('serviceWorker' in navigator){
+  window.addEventListener('load', function(){
+    navigator.serviceWorker.register('sw.js').catch(function(){});
+  });
+}
+</script>
+</body>
+</html>
